@@ -22,7 +22,7 @@ The Drum Simulator will allow the user to play drum sounds by pressing keys on t
   - Press keys on keyboard and play drum/cymbal sounds in a free-style mode.
   - Play an interactive game, in which, the user will need to remember a pattern of drum sounds and play them back in correct order. (Bonus)
   - Record pieces of music they created to listen to them later. (Bonus)
-  - Watch a pixelized character playing the drums, corresponding to the keys being played. (Bonus)
+  - Watch a pixelated character playing the drums, corresponding to the keys being played. (Bonus)
   
   In addition, this project will include:
   
