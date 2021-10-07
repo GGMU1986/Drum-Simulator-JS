@@ -31,8 +31,7 @@ The Drum Simulator will allow the user to play drum sounds by pressing keys on t
    
    **WIREFRAMES**:
    
-   
-   ![](images_drum_proj/Untitled_2)
+![wireframe_pic](https://user-images.githubusercontent.com/8636103/136472561-42872e18-29b5-4282-9c10-8dd2848a31ee.jpeg)   
    
    - Nav Links will include links to this project's Github repo, developer's LinkedIn and the About Modal.
    - Other functionality nav bar allows user to play memory game and record pieces of music.
