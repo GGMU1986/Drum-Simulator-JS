@@ -17,7 +17,6 @@ html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, asid
 body {
   line-height: 1.5;
   font-family: "Permanent Marker", cursive;
-  background-color: black;
 }
 
 ol, ul {
@@ -54,4 +53,24 @@ img {
 
 .header-container h1 {
   font-size: xx-large;
+}
+
+.keys {
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  height: 500px;
 }

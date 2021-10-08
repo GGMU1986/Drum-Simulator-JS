@@ -14,7 +14,7 @@ body {
   font-family: 'Permanent Marker', cursive;
   //background-image: url(../images_drum_proj/colors_img.jpeg);
 
-  background-color: black;
+  //background-color: black;
 }
 
 ol, ul {
@@ -52,3 +52,27 @@ img {
 .header-container h1 {
     font-size: xx-large;
 }
+
+.keys {
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  height: 500px;
+}
+
+// .letter {
+//   font-size: px;
+// }
