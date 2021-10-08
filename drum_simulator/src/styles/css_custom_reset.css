@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav {
   margin: 0;
   padding: 0;
@@ -9,6 +11,7 @@ html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, asid
 
 body {
   line-height: 1.5;
+  font-family: 'Permanent Marker';
 }
 
 ol, ul {

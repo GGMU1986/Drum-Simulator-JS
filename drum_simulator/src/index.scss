@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Permanent Marker', cursive;
+  //background-image: url(../images_drum_proj/colors_img.jpeg);
+
+  background-color: black;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+input[type="radio"], select, input[type="submit"] {
+  cursor: pointer;
+  outline: none;
+}
+
+/* This is useful when implementing a grid system so that all image elements
+will take up 100% width of their containers */
+img {
+  width: 100%
+}
+
+.header-container {
+    height: 100px;
+    display: flex;
+    background-color: red;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+.other-func a, .ext-links a {
+    color: black;
+    margin: 7px;
+    padding: 4px;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 15%;
+}
+
+.header-container h1 {
+    font-size: xx-large;
+}
