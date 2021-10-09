@@ -52,6 +52,7 @@ img {
 .keys {
     display: flex;
     justify-content: center;
+    //min-height: 500px;
     
 }
 
@@ -64,6 +65,11 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: .08s;
+}
+
+.key:hover {
+  background-color: indigo;
 }
 
 .main {
@@ -84,14 +90,15 @@ footer {
   align-items: center;
 }
 
-.key > p {a
+.key > p {
   color: goldenrod;
   text-align: center;
 }
 
 .playing {
   border: 3px solid blue;
-  //color: hotpink;
+  //background-color: indigo;
+  transform: scale(1.1);
   height: 75px;
   width: 75px;
   background-image: url(../images/playing.jpeg);
