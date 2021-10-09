@@ -17,15 +17,11 @@ html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, asid
 body {
   line-height: 1.5;
   font-family: "Permanent Marker", cursive;
+  background-color: black;
 }
 
 ol, ul {
   list-style: none;
-}
-
-input[type=radio], select, input[type=submit] {
-  cursor: pointer;
-  outline: none;
 }
 
 /* This is useful when implementing a grid system so that all image elements
@@ -52,7 +48,7 @@ img {
 }
 
 .header-container h1 {
-  font-size: xx-large;
+  font-size: 45px;
 }
 
 .keys {
@@ -63,7 +59,7 @@ img {
 .key {
   height: 50px;
   width: 50px;
-  border: 2px solid black;
+  border: 2px solid goldenrod;
   padding: 5px;
   margin: 10px;
   display: flex;
@@ -73,4 +69,22 @@ img {
 
 .main {
   height: 500px;
+}
+
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: red;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.key > p {
+  color: goldenrod;
 }
