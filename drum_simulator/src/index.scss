@@ -1,19 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav {
+html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav, p {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 body {
   line-height: 1.5;
   font-family: 'Permanent Marker', cursive;
-  //background-image: url(../images_drum_proj/colors_img.jpeg);
-  //background-image: url(../images/moon_lake.jpeg);
   background-color: black;
 }
 
@@ -47,8 +46,7 @@ img {
 }
 
 .header-container h1 {
-    font-size: 45px;
-    //font-weight: bolder;
+  font-size: 45px;
 }
 
 .keys {
@@ -58,8 +56,8 @@ img {
 }
 
 .key {
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   border: 2px solid goldenrod;
   padding: 5px;
   margin: 10px;
@@ -71,10 +69,6 @@ img {
 .main {
   height: 500px;
 }
-
-// .letter {
-//   font-size: px;
-// }
 
 footer {
   height: 100px;
@@ -90,6 +84,17 @@ footer {
   align-items: center;
 }
 
-.key > p {
+.key > p {a
   color: goldenrod;
+  text-align: center;
+}
+
+.playing {
+  border: 3px solid blue;
+  //color: hotpink;
+  height: 75px;
+  width: 75px;
+  background-image: url(../images/playing.jpeg);
+  background-size: cover;
+  font-size: 20px;
 }
