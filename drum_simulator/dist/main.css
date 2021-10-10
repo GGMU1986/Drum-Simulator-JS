@@ -19,14 +19,13 @@ body {
   line-height: 1.5;
   font-family: "Permanent Marker", cursive;
   background-color: black;
+  width: 100%;
 }
 
 ol, ul {
   list-style: none;
 }
 
-/* This is useful when implementing a grid system so that all image elements
-will take up 100% width of their containers */
 img {
   width: 100%;
 }
@@ -52,14 +51,26 @@ img {
   font-size: 45px;
 }
 
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: red;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .keys {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .key {
-  height: 70px;
-  width: 70px;
+  height: 85px;
+  width: 85px;
   border: 2px solid goldenrod;
   padding: 5px;
   margin: 10px;
@@ -70,25 +81,11 @@ img {
 }
 
 .key:hover {
-  background-color: indigo;
+  background-color: navy;
 }
 
 .main {
   height: 500px;
-}
-
-footer {
-  height: 100px;
-  width: 100%;
-  background-color: red;
-  position: fixed;
-  bottom: 0;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .key > p {
@@ -99,8 +96,8 @@ footer {
 .playing {
   border: 3px solid blue;
   transform: scale(1.1);
-  height: 75px;
-  width: 75px;
+  height: 90px;
+  width: 90px;
   background-image: url(../images/playing.jpeg);
   background-size: cover;
   font-size: 20px;

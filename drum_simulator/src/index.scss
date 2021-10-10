@@ -20,6 +20,8 @@ body {
   line-height: 1.5;
   font-family: 'Permanent Marker', cursive;
   background-color: black;
+  width: 100%;
+  // position: relative;
 }
 
 ol, ul {
@@ -66,13 +68,11 @@ footer {
   background-color: red;
   position: fixed;
   bottom: 0;
-}
-
-.footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 
 //
 // body CSS
@@ -81,13 +81,16 @@ footer {
 .keys {
     display: flex;
     justify-content: center;
-    //min-height: 500px;
-    
+    //margin: 0 auto;
+    align-items: center;
+    // position: absolute;
+    // bottom: 20%;
+    // left: 20%;
 }
 
 .key {
-  height: 70px;
-  width: 70px;
+  height: 85px;
+  width: 85px;
   border: 2px solid goldenrod;
   padding: 5px;
   margin: 10px;
@@ -98,7 +101,8 @@ footer {
 }
 
 .key:hover {
-  background-color: indigo;
+  background-color: navy;
+  
 }
 
 .main {
@@ -114,8 +118,8 @@ footer {
   border: 3px solid blue;
   //background-color: indigo;
   transform: scale(1.1);
-  height: 75px;
-  width: 75px;
+  height: 90px;
+  width: 90px;
   background-image: url(../images/playing.jpeg);
   background-size: cover;
   font-size: 20px;
