@@ -125,19 +125,22 @@ footer {
 
 .drumless {
   margin: 20px;
-  padding: 20px;
-  width: 250px;
+  padding: 15px;
+  width: 235px;
   border: 3px solid red;
   border-radius: 10px;
 }
 
 .music {
   display: flex;
+  justify-content: center;
 }
 
-.drumless > p {
+.drumless > div > p {
   color: white;
-  padding-bottom: 10px;
+  font-size: 20px;
+  padding-bottom: 5px;
+  text-align: center;
 }
 
 aside {

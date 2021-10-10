@@ -120,6 +120,10 @@ footer {
   height: 500px;
 }
 
+// @media  {
+  
+// }
+
 .key > p {
   color: goldenrod;
   text-align: center;
@@ -127,7 +131,6 @@ footer {
 
 .playing {
   border: 3px solid blue;
-  //background-color: indigo;
   transform: scale(1.1);
   height: 90px;
   width: 90px;
@@ -156,13 +159,9 @@ footer {
 //   color: white;
 // }
 
+//
 // drumless tracks buttons
-
-// .main {
-//   display: flex;
-//   justify-content: space-between;
-
-// }
+//
 
 #mute {
   margin: 20px;
@@ -175,8 +174,8 @@ footer {
 
 .drumless {
   margin: 20px;
-  padding: 20px;
-  width: 250px;
+  padding: 15px;
+  width: 235px;
   //height: 200px;
   // display: flex;
   // flex-direction: column;
@@ -185,12 +184,14 @@ footer {
 }
 .music {
   display: flex;
+  justify-content: center;
 }
 
-.drumless > p {
+.drumless > div > p {
   color: white;
-  padding-bottom: 10px
-  //font-size: 25px;
+  font-size: 20px;
+  padding-bottom: 5px;
+  text-align: center;
 }
 
 aside {
