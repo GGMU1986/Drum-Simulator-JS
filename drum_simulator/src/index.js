@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const trackNav = document.querySelector(".drumless");
         let button1 = document.createElement("button")
         let button2 = document.createElement("button")
-        button1.innerText = track[1] + " - Play/Pause"
+        button1.innerText = track[1] + " - Play"
         button2.innerText = 'STOP'
         button1.id = track[0];
         button1.classList.add('btn');
@@ -77,9 +77,16 @@ document.addEventListener("DOMContentLoaded", () => {
         if (this.dataset.playing === 'false') {
             track.play();
             this.dataset.playing = 'true';
+            TRACKS.forEach(track => {
+                if (track[0] === e.target.id) this.innerText = track[1] + " - Pause";
+            })
+
         } else {
             track.pause();
             this.dataset.playing = 'false';
+            TRACKS.forEach(track => {
+                if (track[0] === e.target.id) this.innerText = track[1] + " - Play";
+            })
         }  
     }
 
@@ -89,6 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
         track.currentTime = 0;
         const btn = document.getElementById(`${e.target.id}`)
         btn.dataset.playing = false;
+        TRACKS.forEach(track => {
+            if (track[0] === e.target.id) btn.innerText = track[1] + " - Play";
+        })
     }
     
     const btns = document.querySelectorAll(".btn");
