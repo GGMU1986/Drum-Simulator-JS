@@ -118,6 +118,15 @@ footer {
   color: white;
 }
 
+#mute {
+  margin: 20px;
+}
+
+.vol-label {
+  margin: 20px;
+  color: white;
+}
+
 .drumless {
   margin: 20px;
   padding: 20px;

@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         button.innerText = track[1]
         button.id = track[0];
         button.classList.add('btn');
+        button.dataset.playing = 'false'
         trackNav.append(button);
         // creating audio tags with attributes and appending to correcr HTML ele
         const audioDiv = document.getElementById("audio-tags");
@@ -67,29 +68,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function playSound(e) {
         const track = document.querySelector(`audio[data-song="${e.target.id}"]`);
-        // drumless.currentTime = 0;
-        track.play();
-        //console.log(e.target.id);
+
+        if (this.dataset.playing === 'false') {
+            track.play();
+            this.dataset.playing = 'true';
+        } else {
+            track.pause();
+            this.dataset.playing = 'false';
+        }  
     }
     
     const btns = document.querySelectorAll(".btn");
     btns.forEach(btn => {
         btn.addEventListener('click', playSound)
     })
-
-    // function playMusic(e) {
-    //     const drumless = document.getElementById("get-crazy");
-    //     drumless.currentTime = 0;
-    //     drumless.play();
-    // }
-
-    // const btn = document.getElementById('btn')
-    // const btn2 = document.getElementById('btn2')
-    // btn2.addEventListener('click', function(e){
-    //     console.log(e);
-    // })
-
-    // const btn2 = document.getElementById('btn2')
-    // btn2.addEventListener('click', playMusic)
-    
-})
+});
