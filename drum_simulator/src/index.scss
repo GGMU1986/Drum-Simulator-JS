@@ -73,6 +73,16 @@ footer {
   align-items: center;
 }
 
+.creator > a {
+  display:inline-block;
+  color: black;
+  margin: 7px;
+  padding: 4px;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 15%;
+}
+
 
 //
 // body CSS
@@ -194,3 +204,4 @@ aside {
 button {
   margin: 5px;
 }
+

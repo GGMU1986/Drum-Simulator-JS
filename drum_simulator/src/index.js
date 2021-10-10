@@ -51,12 +51,17 @@ document.addEventListener("DOMContentLoaded", () => {
     TRACKS.forEach(track => {
         // creating buttons with attributes and appending to correcr HTML ele
         const trackNav = document.querySelector(".drumless");
-        let button = document.createElement("button")
-        button.innerText = track[1]
-        button.id = track[0];
-        button.classList.add('btn');
-        button.dataset.playing = 'false'
-        trackNav.append(button);
+        let button1 = document.createElement("button")
+        let button2 = document.createElement("button")
+        button1.innerText = track[1] + " - Play/Pause"
+        button2.innerText = 'STOP'
+        button1.id = track[0];
+        button1.classList.add('btn');
+        button2.classList.add('stop');
+        button2.id = track[0];
+        button1.dataset.playing = 'false'
+        trackNav.append(button1);
+        trackNav.append(button2);
         // creating audio tags with attributes and appending to correcr HTML ele
         const audioDiv = document.getElementById("audio-tags");
         let audio = document.createElement("audio")
@@ -77,9 +82,22 @@ document.addEventListener("DOMContentLoaded", () => {
             this.dataset.playing = 'false';
         }  
     }
+
+    function stopSound(e) {
+        const track = document.querySelector(`audio[data-song="${e.target.id}"]`);
+        track.pause();
+        track.currentTime = 0;
+        const btn = document.getElementById(`${e.target.id}`)
+        btn.dataset.playing = false;
+    }
     
     const btns = document.querySelectorAll(".btn");
     btns.forEach(btn => {
-        btn.addEventListener('click', playSound)
-    })
+        btn.addEventListener('click', playSound);
+    });
+
+    const stopbtns = document.querySelectorAll(".stop")
+    stopbtns.forEach(btn => {
+        btn.addEventListener('click', stopSound);
+    }); 
 });
