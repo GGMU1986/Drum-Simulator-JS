@@ -1,4 +1,10 @@
+// Permanent Marker import from google fonts
+
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+//
+// CSS reset
+//
 
 html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav, p {
   margin: 0;
@@ -21,12 +27,13 @@ ol, ul {
 }
 
 
-
-/* This is useful when implementing a grid system so that all image elements
-will take up 100% width of their containers */
 img {
   width: 100%
 }
+
+//
+// header CSS
+//
 
 .header-container {
     height: 100px;
@@ -48,6 +55,28 @@ img {
 .header-container h1 {
   font-size: 45px;
 }
+
+//
+// footer CSS
+//
+
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: red;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+//
+// body CSS
+//
 
 .keys {
     display: flex;
@@ -76,20 +105,6 @@ img {
   height: 500px;
 }
 
-footer {
-  height: 100px;
-  width: 100%;
-  background-color: red;
-  position: fixed;
-  bottom: 0;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .key > p {
   color: goldenrod;
   text-align: center;
@@ -110,9 +125,9 @@ footer {
   position: relative;
 }
 
-.memory:hover {
+// .memory:hover {
 
-}
+// }
 
 .under-con {
   position: absolute;
