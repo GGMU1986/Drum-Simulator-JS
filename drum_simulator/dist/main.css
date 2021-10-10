@@ -132,3 +132,17 @@ footer {
   color: white;
   padding-bottom: 10px;
 }
+
+aside {
+  margin: 20px;
+  padding: 20px;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid red;
+  border-radius: 10px;
+}
+
+button {
+  margin: 5px;
+}
