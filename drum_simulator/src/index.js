@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     TRACKS.forEach(track => {
-        // creating buttons with attributes and appending to correcr HTML ele
+        // creating buttons with attributes and appending to correct HTML ele
         const trackNav = document.querySelector(".drumless");
         let button1 = document.createElement("button")
         let button2 = document.createElement("button")
@@ -60,9 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
         button2.classList.add('stop');
         button2.id = track[0];
         button1.dataset.playing = 'false'
-        trackNav.append(button1);
-        trackNav.append(button2);
-        // creating audio tags with attributes and appending to correcr HTML ele
+        let btnContainer = document.createElement('div')
+        btnContainer.classList.add("music");
+        btnContainer.append(button1)
+        btnContainer.append(button2)
+        trackNav.append(btnContainer);
+        // creating audio tags with attributes and appending to correct HTML ele
         const audioDiv = document.getElementById("audio-tags");
         let audio = document.createElement("audio")
         let src = "./sounds/" + track[0] + ".wav";

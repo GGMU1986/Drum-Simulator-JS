@@ -114,20 +114,6 @@ footer {
   font-size: 20px;
 }
 
-.memory {
-  position: relative;
-}
-
-.under-con {
-  position: absolute;
-  left: 70px;
-  padding: 50;
-  width: 100px;
-  height: 100px;
-  background-color: black;
-  color: white;
-}
-
 #mute {
   margin: 20px;
 }
@@ -140,11 +126,13 @@ footer {
 .drumless {
   margin: 20px;
   padding: 20px;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
+  width: 250px;
   border: 3px solid red;
   border-radius: 10px;
+}
+
+.music {
+  display: flex;
 }
 
 .drumless > p {
