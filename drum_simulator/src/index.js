@@ -43,26 +43,25 @@ document.addEventListener("DOMContentLoaded", () => {
     //
     
     const TRACKS = [
-        ['btn1', 'track1', 'Track 1'],
-        ['btn2', 'track2', 'Track 2'],
-        ['btn3', 'track3', 'Track 3']
+        ['track1', 'Track 1'],
+        ['track2', 'Track 2'],
+        ['track3', 'Track 3']
     ];
 
     TRACKS.forEach(track => {
         // creating buttons with attributes and appending to correcr HTML ele
         const trackNav = document.querySelector(".drumless");
         let button = document.createElement("button")
-        button.innerText = track[2]
-        button.id = track[1];
+        button.innerText = track[1]
+        button.id = track[0];
         button.classList.add('btn');
-        button.dataset.song = track[1];
         trackNav.append(button);
         // creating audio tags with attributes and appending to correcr HTML ele
         const audioDiv = document.getElementById("audio-tags");
         let audio = document.createElement("audio")
-        let src = "./sounds/" + track[1] + ".wav";
+        let src = "./sounds/" + track[0] + ".wav";
         audio.src = src;
-        audio.dataset.song = track[1]; 
+        audio.dataset.song = track[0]; 
         audioDiv.append(audio);
     })
 
