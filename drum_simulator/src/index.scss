@@ -105,3 +105,24 @@ footer {
   background-size: cover;
   font-size: 20px;
 }
+
+.memory {
+  position: relative;
+}
+
+.memory:hover {
+
+}
+
+.under-con {
+  position: absolute;
+  left: 70px;
+  //bottom: 5px;
+  padding: 50;
+  width: 100px;
+  height: 100px;
+  //display: none;
+  background-color: black;
+  color: white;
+}
+
