@@ -132,16 +132,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // })
 
     
-    // get the audio element
-    const audioElement = document.getElementById('track1');
-    // pass it into the audio context
-    const newTrack = audioContext.createMediaElementSource(audioElement);
-    const gainNode = audioContext.createGain();
-    newTrack.connect(gainNode).connect(audioContext.destination);
-    const volumeControl = document.querySelector('#volume');
-    volumeControl.addEventListener('input', function () {
-        gainNode.gain.value = this.value;
-    });
+    // // get the audio element
+    // const audioElement = document.getElementById('track1');
+    // // pass it into the audio context
+    // const newTrack = audioContext.createMediaElementSource(audioElement);
+    // const gainNode = audioContext.createGain();
+    // newTrack.connect(gainNode).connect(audioContext.destination);
+    // const volumeControl = document.querySelector('#volume');
+    // volumeControl.addEventListener('input', function () {
+    //     gainNode.gain.value = this.value;
+    // });
 
     const otherFunc = document.querySelectorAll('.headerL')
     const popupContainer = document.getElementById('popup-container')
