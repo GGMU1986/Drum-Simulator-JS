@@ -12,21 +12,50 @@
 <body>
     <header class="header-container">
         <nav class="other-func">
-            <a href="">Record</a>
-            <a href="">Memory Game</a>
-                <!-- <div class="under-con">
-                    <p>Under Construction</p>
-                    <p>Come back later</p>
-                </div> -->
-            
+            <!-- <a href="">Record</a>
+            <a href="">Memory Game</a> -->
+            <span id="HL1" class="headerL">Record</span>
+            <span id="HL2" class="headerL">Memory Game</span>
         </nav>
 
         <h1>Drum Simulator</h1>
 
         <nav class="ext-links">      
-            <a href="">About</a>
+            <!-- <a href="">About</a> -->
+            <span id="aboutbtn">About</span>    
         </nav>
     </header>
+    <div id="popup-container">
+        <div id="popup" class="coming-soon">
+            <p>Coming Soon!</p>
+            <button id="close">Close</button>
+        </div>
+    </div>
+
+    <div id="about-container">
+        <div id="about">
+            
+            <p class="instructions">Below there are 8 gold squares labelled A, S, D, F, J, K, L, and Semicolon (;). 
+                Underneath the label is the sound made when that key is pressed on the keyboard. Go ahead, try it, I'll wait.
+                <br><br>
+                The sounds made are  <a href="https://en.wikipedia.org/wiki/Cowbell_(instrument)">COWBELL</a>,  <a href="https://en.wikipedia.org/wiki/Hi-hat">HIHAT</a>,  <a href="https://en.wikipedia.org/wiki/Bass_drum">KICK</a>, 
+                 <a href="https://en.wikipedia.org/wiki/Hi-hat">OPEN HIHAT</a>,  <a href="https://en.wikipedia.org/wiki/Snare_drum">SNARE</a>,  <a href="https://en.wikipedia.org/wiki/Ride_cymbal">RIDE CYMBAL</a>, and  <a href="https://en.wikipedia.org/wiki/Crash_cymbal">CRASH CYMBAL</a>.
+                Don't know what any of those words mean? Don't fret, click on each sound name to learn more!
+                <br><br>
+                Press on keys simultaneously or one at a time, just make some good beats!
+                Once you feel you can hold down a steady beat, click on one of the drumless tracks to your left,
+                and try to add some percussion to the song.
+                <br><br>
+                Don't worry about saving up money for studio time, click on the <span>RECORD</span> button on the top left to save your musical masterpieces!
+                <br><br>
+                When you want to switch it up and test your mental capacity, click on the <span>MEMORY GAME</span> on the top left, and try your luck at remebering the sequence!
+                <br>
+                <p class="enjoy"> enjoy!</p>
+            
+            
+            <button id="close2">Close</button>
+        </div>
+    </div>
 
     <section class="main">
         <nav class="drumless">
@@ -37,11 +66,11 @@
 
         <!-- <aside>
             <button>Pause</button>
-            <button>Stop</button>
+            <button>Stop</button›
         </aside> -->
-        <label for="mute" class="vol-label">Volume</label>
+        <label for="volume›" class="vol-label">Volume</label>
         <br>
-        <input type="range" id="mute" min="0" max="2" value="1" step=".2">
+        <input type="range" id="volume" min="0" max="2" value="1" step=".2">
     </section>
 
     <div class=keys>
@@ -90,6 +119,7 @@
     </div>
 
     <div id="audio-tags">
+        <!-- <audio id="new" src="./sounds/music.wav"></audio> -->
     </div>
 
     <footer>

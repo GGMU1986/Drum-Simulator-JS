@@ -1,6 +1,16 @@
-
+    // things to do:
+    // - figure out volume control ?? 
+    // - CSS with .keys class, all keys move when one is pressed
+    // Audio Visualizer with canvas
+    // Record button
+    // github/linkedin pic in links
 
 document.addEventListener("DOMContentLoaded", () => {
+    
+    // const AudioContext = window.AudioContext || window.webkitAudioContext;
+    // const audioContext = new AudioContext();
+    // console.log(audioContext);
+
     const SOUNDS = [
         ["KeyA", "COWBELL"],
         ["KeyS", "HIHAT"],
@@ -70,7 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let audio = document.createElement("audio")
         let src = "./sounds/" + track[0] + ".wav";
         audio.src = src;
-        audio.dataset.song = track[0]; 
+        audio.dataset.song = track[0];
+        audio.classList.add("track") 
         audioDiv.append(audio);
     })
 
@@ -113,4 +124,50 @@ document.addEventListener("DOMContentLoaded", () => {
     stopbtns.forEach(btn => {
         btn.addEventListener('click', stopSound);
     }); 
+
+    // adding an event listener to set playing to false and change text on buttons fro tracks
+    // let audioEles = document.querySelectorAll('.track');
+    // audioEles.forEach(ele => {
+    //     ele.addEventListener('ended', endPlaying)
+    // })
+
+    
+    // get the audio element
+    const audioElement = document.getElementById('track1');
+    // pass it into the audio context
+    const newTrack = audioContext.createMediaElementSource(audioElement);
+    const gainNode = audioContext.createGain();
+    newTrack.connect(gainNode).connect(audioContext.destination);
+    const volumeControl = document.querySelector('#volume');
+    volumeControl.addEventListener('input', function () {
+        gainNode.gain.value = this.value;
+    });
+
+    const otherFunc = document.querySelectorAll('.headerL')
+    const popupContainer = document.getElementById('popup-container')
+    const close = document.getElementById('close')
+    const aboutbtn = document.getElementById('aboutbtn')
+    const aboutContainer = document.getElementById('about-container')
+    const close2 = document.getElementById('close2')
+
+
+    otherFunc.forEach(btn => {
+        btn.addEventListener('click', () => {
+            popupContainer.classList.add('show');
+        })
+    })
+
+    close.addEventListener('click', () => {
+        popupContainer.classList.remove('show');
+    })
+
+    
+    aboutbtn.addEventListener('click', () => {
+        aboutContainer.classList.add('show');
+    })
+   
+
+    close2.addEventListener('click', () => {
+        aboutContainer.classList.remove('show');
+    })
 });
