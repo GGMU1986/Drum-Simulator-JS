@@ -54,22 +54,34 @@
     </div>
 
     <section class="main">
-        <nav class="drumless">
+        <div class="track-cont">
+            <div id="popup-container">
+                <div id="popup" class="coming-soon">
+                    <p>Coming Soon!</p>
+                    <button id="close">Close</button>
+                </div>
+            </div>
+    
+            <nav class="drumless">
+                <div>
+                    <p>Drumless Tracks</p>
+                </div>
+            </nav>
             <div>
-                <p>Drumless Tracks</p>
+                <label for="volume›" class="vol-label">Volume</label>
+                <input type="range" id="volume" min="0" max="2" value="1" step=".2">
             </div>
-        </nav>
-        <br>
-        <label for="volume›" class="vol-label">Volume</label>
-        <input type="range" id="volume" min="0" max="2" value="1" step=".2">
-        
-        <div id="popup-container">
-            <div id="popup" class="coming-soon">
-                <p>Coming Soon!</p>
-                <button id="close">Close</button>
-            </div>
+            
         </div>
+    
+            <div class="canvas-conatiner">
+                <canvas id="canvas1"></canvas>
+            </div>
+        
     </section>
+
+    
+
     <div class="parent-keys">
         <div class=keys>
             

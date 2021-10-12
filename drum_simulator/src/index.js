@@ -167,4 +167,23 @@ document.addEventListener("DOMContentLoaded", () => {
     close2.addEventListener('click', () => {
         aboutContainer.classList.remove('show');
     })
+    
+    //
+    // canvas in middle of screen
+    //
+
+    // let canvas = document.getElementById('canvas1');
+    // let ctx = canvas.getContext('2d');
+    // // // canvas.width = window.innerWidth;
+    // // // canvas.height = window.innerHeight;
+    // // console.log(ctx);
+
+    // // // ctx.beginPath();
+    // ctx.fillStyle = 'green';
+    // ctx.fillRect(700, 500, 50, 50)
+    // // ctx.arc(500, 500, 50, 0, Math.PI * 2);
+    
+    // // ctx.closePath();
+    
+
 });

@@ -21,19 +21,10 @@ body {
   font-family: 'Permanent Marker', cursive;
   background-color: black;
   width: 100%;
-  // position: relative;
-  //background-image: url(../images/jazz.jpeg);
-  //background-size: contain;
-
 }
 
 ol, ul {
   list-style: none;
-}
-
-
-img {
-  width: 100%
 }
 
 //
@@ -55,9 +46,6 @@ img {
     font-size: 20px;
     text-shadow: 1px 1px goldenrod;
     text-decoration: none;
-    
-    //border: 2px solid black;
-    //border-radius: 15%;
 }
 
 .header-container h1 {
@@ -108,6 +96,10 @@ footer {
   text-shadow: goldenrod;
   padding: 5px;
 } 
+
+.gitin > a:last-child {
+  color: #0e76a8;
+}
 
 footer > p, .creator > span {
   font-size: 20px;
@@ -165,10 +157,6 @@ footer > span {
   height: 600px;
 }
 
-// @media  {
-  
-// }
-
 .key > p {
   color: goldenrod;
   text-align: center;
@@ -213,12 +201,12 @@ footer > span {
   }
 
   #about > p {
-    font-size: 8px;
+    font-size: 15px;
   }
 
   #about {
-    width: 450px;
-    height: 650;
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -263,7 +251,6 @@ aside {
   margin: 20px;
   padding: 20px;
   width: 120px;
-  //height: 200px;
   display: flex;
   flex-direction: column;
   border: 3px solid red;
@@ -286,11 +273,11 @@ button:hover {
 }
 
 #popup-container {
-  display: inline-block;
+  display: none;
 }
 
 #popup-container.show {
-  display: none;
+  display: inline-block;
 }
 
 .coming-soon {
@@ -365,4 +352,14 @@ button:hover {
   font-family:'Permanent Marker';
   color: goldenrod;
 }
+
+// #canvas1 {
+//   // position: absolute;
+//   // border: 2px solid white;
+//   // top: 20%;
+//   // left: 35%;
+//   // width: 35%;
+//   // height: 45%;
+//   // opacity: 2;
+// }
 

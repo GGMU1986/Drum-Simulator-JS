@@ -30,10 +30,6 @@ ol, ul {
   list-style: none;
 }
 
-img {
-  width: 100%;
-}
-
 .header-container {
   height: 100px;
   display: flex;
@@ -94,6 +90,10 @@ footer {
   color: black;
   text-shadow: goldenrod;
   padding: 5px;
+}
+
+.gitin > a:last-child {
+  color: #0e76a8;
 }
 
 footer > p, .creator > span {
@@ -183,12 +183,12 @@ footer > span {
   }
 
   #about > p {
-    font-size: 8px;
+    font-size: 15px;
   }
 
   #about {
-    width: 450px;
-    height: 650;
+    width: 300px;
+    height: 300px;
   }
 }
 #volume {
@@ -255,11 +255,11 @@ button:hover {
 }
 
 #popup-container {
-  display: inline-block;
+  display: none;
 }
 
 #popup-container.show {
-  display: none;
+  display: inline-block;
 }
 
 .coming-soon {
