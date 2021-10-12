@@ -1,9 +1,13 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Festive&display=swap);
 /*!*****************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
+  \*****************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap);
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (2) ***!
   \*****************************************************************************************************************************************/
 html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, aside, figure, figcaption, footer, header, nav, p {
   margin: 0;
@@ -68,20 +72,40 @@ footer {
   align-items: center;
 }
 
-.creator > a {
-  display: inline-block;
-  color: black;
-  margin: 7px;
-  padding: 4px;
-  text-decoration: none;
-  border: 2px solid black;
-  border-radius: 15%;
+.creator {
   display: flex;
-  justify-content: space-around;
+  flex: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
-footer p, footer span {
+.creator > span {
+  margin: 5px;
+  padding: 5px;
+}
+
+.gitin {
+  margin: 5px;
+  padding: 5px;
+}
+
+.gitin > a {
+  font-size: 30px;
+  color: black;
+  text-shadow: goldenrod;
+  padding: 5px;
+}
+
+footer > p, .creator > span {
+  font-size: 20px;
   text-shadow: 2px 2px goldenrod;
+}
+
+footer > span {
+  font-size: 40px;
+  color: white;
+  text-shadow: 1px 1px goldenrod;
+  font-family: "Festive", cursive;
 }
 
 .parent-keys {
