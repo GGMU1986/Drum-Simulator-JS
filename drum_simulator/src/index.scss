@@ -78,7 +78,7 @@ footer {
   height: 100px;
   width: 100%;
   background-color: red;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   display: flex;
   justify-content: space-around;
@@ -93,6 +93,8 @@ footer {
   text-decoration: none;
   border: 2px solid black;
   border-radius: 15%;
+  display: flex;
+  justify-content: space-around;
 }
 
 footer p, footer span {

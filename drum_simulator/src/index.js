@@ -1,8 +1,8 @@
     // things to do:
-    
-    // Audio Visualizer with canvas
-    
-    // github/linkedin pic in links
+    //  1. github / linkedin pic in links
+    //  2. Make app responsive on different screens
+    //  3. Move code to different folders
+    //  4. Audio Visualizer with canvas 
 
 document.addEventListener("DOMContentLoaded", () => {
     
