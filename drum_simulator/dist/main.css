@@ -109,12 +109,15 @@ footer > span {
 }
 
 .parent-keys {
+  position: relative;
+  bottom: 11%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .keys {
+  position: absolute;
   text-align: center;
   display: inline-flex;
   background: repeating-linear-gradient(45deg, blue, green, red);
@@ -139,10 +142,6 @@ footer > span {
   background-color: greenyellow;
 }
 
-.main {
-  height: 600px;
-}
-
 .key > p {
   color: goldenrod;
   text-align: center;
@@ -158,39 +157,16 @@ footer > span {
   font-size: 20px;
 }
 
-@media screen and (max-width: 1200px) {
-  .main {
-    height: 480px;
-    display: flex;
-    flex-direction: column-reverse;
-    width: 20%;
-  }
-
-  #volume {
-    width: 50%;
-  }
-
-  .coming-soon {
-    position: fixed;
-    top: 13%;
-    left: 10%;
-    height: 150px;
-    width: 250px;
-  }
-
-  .coming-soon > p {
-    font-size: 25px;
-  }
-
-  #about > p {
-    font-size: 15px;
-  }
-
-  #about {
-    width: 300px;
-    height: 300px;
-  }
+section {
+  display: flex;
+  height: 565px;
 }
+
+.track-container {
+  display: flex;
+  flex-direction: column;
+}
+
 #volume {
   margin: 20px;
 }
@@ -211,11 +187,6 @@ footer > span {
   width: 265px;
   border: 3px solid red;
   border-radius: 10px;
-}
-
-.music {
-  display: flex;
-  justify-content: center;
 }
 
 .drumless > div > p {
@@ -333,4 +304,35 @@ button:hover {
   font-size: 25px;
   font-family: "Permanent Marker";
   color: goldenrod;
+}
+
+@media screen and (max-width: 1200px) {
+  section {
+    height: 550px;
+  }
+
+  #volume {
+    width: 50%;
+  }
+
+  .coming-soon {
+    position: fixed;
+    top: 13%;
+    left: 10%;
+    height: 150px;
+    width: 250px;
+  }
+
+  .coming-soon > p {
+    font-size: 25px;
+  }
+
+  #about > p {
+    font-size: 17px;
+  }
+
+  #about {
+    width: 675px;
+    height: 505px;
+  }
 }

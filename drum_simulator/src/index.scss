@@ -113,22 +113,22 @@ footer > span {
   font-family: 'Festive', cursive;
 }
 
-
 //
 // body CSS
 //
 
 .parent-keys {
+  position: relative;
+  bottom: 11%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .keys {
+  position: absolute;
   text-align: center;
   display: inline-flex;
-  //justify-content: center;
-  //align-items: center;
   background: repeating-linear-gradient(45deg, blue, green, red);  
 }
 
@@ -153,9 +153,9 @@ footer > span {
   
 }
 
-.main {
-  height: 600px;
-}
+// .main {
+//   height: 600px;
+// }
 
 .key > p {
   color: goldenrod;
@@ -176,38 +176,14 @@ footer > span {
 // drumless tracks buttons
 //
 
-@media screen and (max-width: 1200px) {
-  .main {
-    height: 480px;
-    display: flex;
-    flex-direction: column-reverse;
-    width: 20%;
-  }
+section {
+  display: flex;
+  height: 565px;
+}
 
-  #volume {
-    width: 50%;
-  }
-
-  .coming-soon {
-    position: fixed;
-    top: 13%;
-    left: 10%;
-    height: 150px;
-    width: 250px;
-  }
-
-  .coming-soon > p {
-    font-size: 25px;
-  }
-
-  #about > p {
-    font-size: 15px;
-  }
-
-  #about {
-    width: 300px;
-    height: 300px;
-  }
+.track-container {
+  display: flex;
+  flex-direction: column;
 }
 
 #volume {
@@ -230,10 +206,6 @@ footer > span {
   width: 265px;
   border: 3px solid red;
   border-radius: 10px;
-}
-.music {
-  display: flex;
-  justify-content: center;
 }
 
 .drumless > div > p {
@@ -353,13 +325,37 @@ button:hover {
   color: goldenrod;
 }
 
-// #canvas1 {
-//   // position: absolute;
-//   // border: 2px solid white;
-//   // top: 20%;
-//   // left: 35%;
-//   // width: 35%;
-//   // height: 45%;
-//   // opacity: 2;
-// }
+//
+// Responsive page
+//
 
+@media screen and (max-width: 1200px) {
+  section {
+    height: 550px;
+  }
+
+  #volume {
+    width: 50%;
+  }
+
+  .coming-soon {
+    position: fixed;
+    top: 13%;
+    left: 10%;
+    height: 150px;
+    width: 250px;
+  }
+
+  .coming-soon > p {
+    font-size: 25px;
+  }
+
+  #about > p {
+    font-size: 17px;
+  }
+
+  #about {
+    width: 675px;
+    height: 505px;
+  }
+}
