@@ -39,7 +39,7 @@
                 Underneath the label is the sound made when that key is pressed on the keyboard. Go ahead, try it, I'll wait.
                 <br><br>
                 The sounds made are  <a href="https://en.wikipedia.org/wiki/Cowbell_(instrument)">COWBELL</a>,  <a href="https://en.wikipedia.org/wiki/Hi-hat">HIHAT</a>,  <a href="https://en.wikipedia.org/wiki/Bass_drum">KICK</a>, 
-                 <a href="https://en.wikipedia.org/wiki/Hi-hat">OPEN HIHAT</a>,  <a href="https://en.wikipedia.org/wiki/Snare_drum">SNARE</a>,  <a href="https://en.wikipedia.org/wiki/Ride_cymbal">RIDE CYMBAL</a>, and  <a href="https://en.wikipedia.org/wiki/Crash_cymbal">CRASH CYMBAL</a>.
+                 <a href="https://en.wikipedia.org/wiki/Hi-hat">OPEN HIHAT</a>,  <a href="https://en.wikipedia.org/wiki/Snare_drum">SNARE</a>, <a href='https://en.wikipedia.org/wiki/Tom-tom_drum'>TOM</a>, <a href="https://en.wikipedia.org/wiki/Ride_cymbal">RIDE CYMBAL</a>, and  <a href="https://en.wikipedia.org/wiki/Crash_cymbal">CRASH CYMBAL</a>.
                 Don't know what any of those words mean? Don't fret, click on each sound name to learn more!
                 <br><br>
                 Press on keys simultaneously or one at a time, just make some good beats!
@@ -72,49 +72,50 @@
         <br>
         <input type="range" id="volume" min="0" max="2" value="1" step=".2">
     </section>
-
-    <div class=keys>
-        <!-- <div> -->
-            <!-- <img src="./images/cowbell.jpeg" alt="cowbell pic"> -->
-        <div data-key="KeyA" class="key">
-            <p>A</p>
-            <p>COWBELL</p>
-        </div>
-        <!-- </div> -->
-
-        <div data-key="KeyS" class="key">
-            <p>S</p>
-            <p>HIHAT</p>
-        </div>
-
-        <div data-key="KeyD" class="key">
-            <p>D</p>
-            <p>KICK</p>
-        </div>
-
-        <div data-key="KeyF" class="key">
-            <p>F</p>
-            <p>OPEN HIHAT</p>
-        </div>
-
-        <div data-key="KeyJ" class="key">
-            <p>J</p>
-            <p>SNARE</p>
-        </div>
-
-        <div data-key="KeyK" class="key">
-            <p>K</p>
-            <p>TOM</p>
-        </div>
-
-        <div data-key="KeyL" class="key">
-            <p>L</p>
-            <p>RIDE</p>
-        </div>
-
-        <div data-key="Semicolon" class="key">
-            <p>;</p>
-            <p>CRASH</p>
+    <div class="parent-keys">
+        <div class=keys>
+            <!-- <div> -->
+                <!-- <img src="./images/cowbell.jpeg" alt="cowbell pic"> -->
+            <div data-key="KeyA" class="key">
+                <p>A</p>
+                <p>COWBELL</p>
+            </div>
+            <!-- </div> -->
+    
+            <div data-key="KeyS" class="key">
+                <p>S</p>
+                <p>HIHAT</p>
+            </div>
+    
+            <div data-key="KeyD" class="key">
+                <p>D</p>
+                <p>KICK</p>
+            </div>
+    
+            <div data-key="KeyF" class="key">
+                <p>F</p>
+                <p>OPEN HIHAT</p>
+            </div>
+    
+            <div data-key="KeyJ" class="key">
+                <p>J</p>
+                <p>SNARE</p>
+            </div>
+    
+            <div data-key="KeyK" class="key">
+                <p>K</p>
+                <p>TOM</p>
+            </div>
+    
+            <div data-key="KeyL" class="key">
+                <p>L</p>
+                <p>RIDE</p>
+            </div>
+    
+            <div data-key="Semicolon" class="key">
+                <p>;</p>
+                <p>CRASH</p>
+            </div>
         </div>
     </div>
 
@@ -125,7 +126,7 @@
     <footer>
         <p>Copyright Drum Simulator 2021</p>
         <div class="creator">
-            <p>Created by George Tsimis</p>
+            <span>Created by George Tsimis</span>
             <a href="https://github.com/GGMU1986">Github</a>
             <a href="https://www.linkedin.com/in/george-tsimis-a5986224/">LinkedIn</a>
         </div>

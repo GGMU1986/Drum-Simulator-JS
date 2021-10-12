@@ -65,6 +65,11 @@ img {
   text-shadow: 2px 2px goldenrod;
 }
 
+.header-container h1:hover {
+  color: goldenrod;
+  text-shadow: 3px 3px black;
+}
+
 //
 // footer CSS
 //
@@ -90,19 +95,32 @@ footer {
   border-radius: 15%;
 }
 
+footer p, footer span {
+  text-shadow: 2px 2px goldenrod;
+}
+
 
 //
 // body CSS
 //
 
+.parent-keys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .keys {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  text-align: center;
+  display: inline-flex;
+  //justify-content: center;
+  //align-items: center;
+  background: repeating-linear-gradient(45deg, blue, green, red);  
 }
 
 .key {
+  //background: linear-gradient(85deg, black, goldenrod);
+  color: black;
   background-color: black;
   height: 85px;
   width: 85px;
@@ -117,7 +135,7 @@ footer {
 }
 
 .key:hover {
-  background-color: navy;
+  background-color: greenyellow;
   
 }
 
@@ -180,6 +198,10 @@ footer {
   color: white;
 }
 
+.vol-label:hover {
+  color: goldenrod;
+}
+
 .drumless {
   background-color: black;
   margin: 20px;
@@ -203,6 +225,10 @@ footer {
   text-align: center;
 }
 
+.drumless > div > p:hover {
+  color: goldenrod;
+}
+
 aside {
   margin: 20px;
   padding: 20px;
@@ -224,6 +250,11 @@ button {
   border-radius: 5px;
 }
 
+button:hover {
+  background: goldenrod;
+  color: white;
+}
+
 #popup-container {
   opacity: 0;
 }
@@ -237,7 +268,7 @@ button {
   color: white;
   position: fixed;
   top: 13%;
-  left: 15%;
+  left: 20%;
   height: 200px;
   width: 300px;
   border: 4px solid red;

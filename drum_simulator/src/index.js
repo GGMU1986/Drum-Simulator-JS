@@ -1,8 +1,7 @@
     // things to do:
-    // - figure out volume control ?? 
-    // - CSS with .keys class, all keys move when one is pressed
+    
     // Audio Visualizer with canvas
-    // Record button
+    
     // github/linkedin pic in links
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -22,13 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
         ["Semicolon", "CRASH"],
     ]
 
-    SOUNDS.forEach(pair => {
+    SOUNDS.forEach((pair, i) => {
         let audio = document.createElement("audio");
         const audioDiv = document.getElementById("audio-tags");
         audioDiv.append(audio);
         let src = "./sounds/" + pair[1] + ".wav";
         audio.src = src;
         audio.dataset.key = `${pair[0]}`;
+        audio.id = `${i + 1}` 
     })
     
     window.addEventListener('keydown', function(e) {
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ['track3', 'Track 3']
     ];
 
-    TRACKS.forEach(track => {
+    TRACKS.forEach((track, i) => {
         // creating buttons with attributes and appending to correct HTML ele
         const trackNav = document.querySelector(".drumless");
         let button1 = document.createElement("button")
@@ -78,10 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // creating audio tags with attributes and appending to correct HTML ele
         const audioDiv = document.getElementById("audio-tags");
         let audio = document.createElement("audio")
+        audio.setAttribute("loop", "true")
         let src = "./sounds/" + track[0] + ".wav";
         audio.src = src;
         audio.dataset.song = track[0];
-        audio.classList.add("track") 
+        audio.classList.add("track")
+        audio.id = `t${i + 1}`; 
         audioDiv.append(audio);
     })
 
@@ -125,23 +127,18 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener('click', stopSound);
     }); 
 
-    // adding an event listener to set playing to false and change text on buttons fro tracks
-    // let audioEles = document.querySelectorAll('.track');
-    // audioEles.forEach(ele => {
-    //     ele.addEventListener('ended', endPlaying)
-    // })
+    // Adjusting volume
 
+    function changeVolume(e) {
+        const newVol = e.target.value;
+        const audios = document.querySelectorAll('audio');
+        audios.forEach(audio => audio.volume = newVol);
+    }
+
+    const volume = document.getElementById('volume');
+    volume.addEventListener('input', changeVolume)
     
-    // // get the audio element
-    // const audioElement = document.getElementById('track1');
-    // // pass it into the audio context
-    // const newTrack = audioContext.createMediaElementSource(audioElement);
-    // const gainNode = audioContext.createGain();
-    // newTrack.connect(gainNode).connect(audioContext.destination);
-    // const volumeControl = document.querySelector('#volume');
-    // volumeControl.addEventListener('input', function () {
-    //     gainNode.gain.value = this.value;
-    // });
+    // Pop ups for RECORD, MEMORY GAME and ABOUT
 
     const otherFunc = document.querySelectorAll('.headerL')
     const popupContainer = document.getElementById('popup-container')
