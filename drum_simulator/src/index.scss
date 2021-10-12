@@ -163,9 +163,6 @@ footer > span {
 
 .main {
   height: 600px;
-  //display: flex;
-  //justify-content: right;
-  //float: right;
 }
 
 // @media  {
@@ -187,29 +184,43 @@ footer > span {
   font-size: 20px;
 }
 
-// .memory {
-//   position: relative;
-// }
-
-// // .memory:hover {
-
-// // }
-
-// .under-con {
-//   position: absolute;
-//   left: 70px;
-//   //bottom: 5px;
-//   padding: 50;
-//   width: 100px;
-//   height: 100px;
-//   //display: none;
-//   background-color: black;
-//   color: white;
-// }
-
 //
 // drumless tracks buttons
 //
+
+@media screen and (max-width: 1200px) {
+  .main {
+    height: 480px;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 20%;
+  }
+
+  #volume {
+    width: 50%;
+  }
+
+  .coming-soon {
+    position: fixed;
+    top: 13%;
+    left: 10%;
+    height: 150px;
+    width: 250px;
+  }
+
+  .coming-soon > p {
+    font-size: 25px;
+  }
+
+  #about > p {
+    font-size: 8px;
+  }
+
+  #about {
+    width: 450px;
+    height: 650;
+  }
+}
 
 #volume {
   margin: 20px;
@@ -229,9 +240,6 @@ footer > span {
   margin: 20px;
   padding: 15px;
   width: 265px;
-  //height: 200px;
-  // display: flex;
-  // flex-direction: column;
   border: 3px solid red;
   border-radius: 10px;
 }
@@ -278,11 +286,11 @@ button:hover {
 }
 
 #popup-container {
-  opacity: 0;
+  display: inline-block;
 }
 
 #popup-container.show {
-  opacity: 1;
+  display: none;
 }
 
 .coming-soon {
@@ -308,11 +316,11 @@ button:hover {
 }
 
 #about-container {
-  opacity: 0;
+  display: none;
 }
 
 #about-container.show {
-  opacity: 1;
+  display: inline-block;
 }
 
 #about {
