@@ -172,8 +172,8 @@ document.addEventListener("DOMContentLoaded", () => {
             this.x = Math.round(Math.random() * 1150);
             this.y = Math.round(Math.random() * 800);
             this.size = Math.round(Math.random() * 50); // sets radius between 0 & 50
-            this.velX = Math.random() * 20; // sets a number btw -5 & 5
-            this.velY = Math.random() * 10; // sets a number btw -5 & 5
+            this.velX = Math.random() * 4 - 2; 
+            this.velY = Math.random() * 4 - 2; 
         }
 
         // updates random x, y position each time we call animate in loop
@@ -187,8 +187,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // draws a new balloon
         draw() {
             //ctx.clearRect(0, 0, canvas.width, canvas.height);
-            //ctx.fillStyle = colors[Math.floor(Math.random() * colors.length - 1)];
-            ctx.fillStyle = 'white'
+            ctx.fillStyle = colors[Math.floor(Math.random() * colors.length - 1)];
+            //ctx.fillStyle = 'white'
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
@@ -201,13 +201,15 @@ document.addEventListener("DOMContentLoaded", () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         balloon.update();
         balloon.draw();
-        requestAnimationFrame(animate(balloon));
+        requestAnimationFrame(() => { animate(balloon) });
     }
 
     document.addEventListener('keydown', function(e) {
-        ctx.clearRect(0, 0, 1150, 800);
-        const balloon = new Balloon();
-        animate(balloon) 
+        //ctx.clearRect(0, 0, 1450, 800);
+        const balloon1 = new Balloon();
+        //const balloon2 = new Balloon();
+        animate(balloon1) 
+        //animate(balloon2) 
     }) 
 
 
