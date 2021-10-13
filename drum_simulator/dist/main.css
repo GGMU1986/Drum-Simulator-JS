@@ -22,7 +22,7 @@ html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, asid
 body {
   line-height: 1.5;
   font-family: "Permanent Marker", cursive;
-  background-color: black;
+  background-image: url(../images/background.jpeg);
   width: 100%;
 }
 
