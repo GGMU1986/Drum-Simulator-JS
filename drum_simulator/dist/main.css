@@ -234,15 +234,16 @@ button:hover {
 }
 
 #popup {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 15%;
-  width: 700px;
+  left: 35%;
   border: 3px solid red;
   border-radius: 10px;
 }
 
 figure {
-  display: flex;
   padding: 10px;
   margin: 10px;
 }

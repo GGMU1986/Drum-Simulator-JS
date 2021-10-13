@@ -1,13 +1,7 @@
-    // things to do:
-    //  1. Keydown animations
-    //  2. Move code to different folders
      
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    // const AudioContext = window.AudioContext || window.webkitAudioContext;
-    // const audioContext = new AudioContext();
-    // console.log(audioContext);
 
     const SOUNDS = [
         ["KeyA", "COWBELL"],
@@ -54,7 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const TRACKS = [
         ['track1', 'Track 1'],
         ['track2', 'Track 2'],
-        ['track3', 'Track 3']
+        ['track3', 'Track 3'],
+        ['track4', 'Track 4']
     ];
 
     TRACKS.forEach((track, i) => {
@@ -186,13 +181,14 @@ document.addEventListener("DOMContentLoaded", () => {
             // ctx.clearRect(0, 0, canvas.width, canvas.height);
             this.x += this.velX;
             this.y += this.velY;
-            this.size += Math.floor(Math.random())
+            //this.size += Math.floor(Math.random())
         }
 
         // draws a new balloon
         draw() {
             //ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = colors[Math.floor(Math.random() * colors.length - 1)];
+            //ctx.fillStyle = colors[Math.floor(Math.random() * colors.length - 1)];
+            ctx.fillStyle = 'white'
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
@@ -200,22 +196,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    window.addEventListener('keydown', function(e) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        const balloon = new Balloon();
-        animate(balloon)
-        
-    }) 
-
     function animate(balloon) {
         if (balloon.x > 1150 || balloon.y > 800) return;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         balloon.update();
         balloon.draw();
         requestAnimationFrame(animate(balloon));
     }
 
+    document.addEventListener('keydown', function(e) {
+        ctx.clearRect(0, 0, 1150, 800);
+        const balloon = new Balloon();
+        animate(balloon) 
+    }) 
+
+
     const IMAGES = [
-        ['KeyG', 'whiplash', ""],
+        ['KeyG', 'whiplash'],
         ['KeyH', 'will'],
         ['Space', 'monkey']
     ]     
