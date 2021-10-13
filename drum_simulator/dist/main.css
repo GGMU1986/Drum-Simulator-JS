@@ -306,6 +306,34 @@ button:hover {
   color: goldenrod;
 }
 
+#whiplash {
+  display: none;
+}
+
+#whiplash.show {
+  display: inline-block;
+}
+
+#will {
+  display: none;
+}
+
+#monkey {
+  display: none;
+}
+
+#monkey.show {
+  display: inline-block;
+}
+
+#will.show {
+  display: inline-block;
+}
+
+#whiplash.show {
+  display: inline-block;
+}
+
 #canvas1 {
   width: 100%;
   height: 100%;

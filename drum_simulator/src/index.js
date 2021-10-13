@@ -182,18 +182,21 @@ document.addEventListener("DOMContentLoaded", () => {
             this.x = Math.round(Math.random() * 1150);
             this.y = Math.round(Math.random() * 800);
             this.size = Math.round(Math.random() * 50); // sets radius between 0 & 50
-            this.velX = Math.random() * 10 - 2; // sets a number btw -5 & 5
-            this.velY = Math.random() * 10 - 2; // sets a number btw -5 & 5
+            this.velX = Math.random() * 20; // sets a number btw -5 & 5
+            this.velY = Math.random() * 10; // sets a number btw -5 & 5
         }
 
         // updates random x, y position each time we call animate in loop
-        // update() {
-        //     this.x += this.velX;
-        //     this.y += this.velY;
-        // }
+        update() {
+            // ctx.clearRect(0, 0, canvas.width, canvas.height);
+            this.x += this.velX;
+            this.y += this.velY;
+            this.size += Math.floor(Math.random())
+        }
 
         // draws a new balloon
         draw() {
+            //ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = colors[Math.floor(Math.random() * colors.length - 1)];
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -202,41 +205,47 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // function makeBalloons() {
-    //     for (let i = 0; i < 10; i++) {
-    //         balloonArr.push(new Balloon());
-    //     }
-    // }
-    //makeBalloons();
-    // console.log(balloonArr);
-
-    // function moveBalloon() {
-    //     for (let i = 0; i < balloonArr.length; i++) {
-    //         balloonArr[i].update();
-    //         balloonArr[i].draw();
-    //     }
-    //     // if (i === balloonArr.length - 1) i = 0;
-    // }
-
-    // function animate(balloon) {
-    //     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    //     balloon.update();
-    //     balloon.draw();    
-    //     requestAnimationFrame(animate);
-    // }
-
-    // animate();
-
     window.addEventListener('keydown', function(e) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        const balloon1 = new Balloon()
-        const balloon2 = new Balloon()
-        const balloon3 = new Balloon()
-        balloon1.draw()
-        balloon2.draw()
-        balloon3.draw()
-        // const balloon = new Balloon();
-        // animate(balloon); 
-        // console.log(this);
+        const balloon = new Balloon();
+        animate(balloon)
+        
     }) 
+
+    function animate(balloon) {
+        if (balloon.x > 1150 || balloon.y > 800) return;
+        balloon.update();
+        balloon.draw();
+        requestAnimationFrame(animate(balloon));
+    }
+
+    const IMAGES = [
+        ['KeyG', 'whiplash', ""],
+        ['KeyH', 'will'],
+        ['Space', 'monkey']
+    ]     
+
+    window.addEventListener('keydown', function(e) {
+        IMAGES.forEach((img) => {
+            if (e.code === img[0]) {
+                document.getElementById(`${img[1]}`).classList.add('show');
+            }
+        })
+    })
+
+    const will = document.getElementById('cwill')
+    const whiplash = document.getElementById('cwhiplash')
+    const monkey = document.getElementById('cmonkey')
+
+    will.addEventListener('click', function(e) {
+        document.getElementById('will').classList.remove('show');
+    })
+
+    whiplash.addEventListener('click', function (e) {
+        document.getElementById('whiplash').classList.remove('show');
+    })
+
+    monkey.addEventListener('click', function(e) {
+        document.getElementById('monkey').classList.remove('show');
+    })
 });
