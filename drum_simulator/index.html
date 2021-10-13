@@ -12,6 +12,35 @@
     <title>Drum Simulator</title>
 </head>
 <body>
+
+    <div id="about-container">
+
+        <div id="about">
+            <p class="welcome">Welcome to the Drum Simulator</p>
+            <br>
+            <p>There are 8 gold squares labelled A, S, D, F, J, K, L, and Semicolon (;).
+            <p>Underneath the label is the sound made when that key is pressed on the keyboard.</p>
+                The sounds made are <a href="https://en.wikipedia.org/wiki/Cowbell_(instrument)">COWBELL</a>, <a
+                    href="https://en.wikipedia.org/wiki/Hi-hat">HIHAT</a>, <a href="https://en.wikipedia.org/wiki/Bass_drum">KICK</a>,
+                <a href="https://en.wikipedia.org/wiki/Hi-hat">OPEN HIHAT</a>, <a
+                    href="https://en.wikipedia.org/wiki/Snare_drum">SNARE</a>, <a
+                    href='https://en.wikipedia.org/wiki/Tom-tom_drum'>TOM</a>, <a href="https://en.wikipedia.org/wiki/Ride_cymbal">RIDE
+                    CYMBAL</a>, and <a href="https://en.wikipedia.org/wiki/Crash_cymbal">CRASH CYMBAL</a>.
+                    Don't know what any of those words mean? Don't fret, click on each sound name above to learn more!</p>
+                    <br>
+            Press on keys simultaneously or one at a time, just make some good beats!
+            Once you feel you can hold down a steady beat, click on one of the drumless tracks
+            and try to add some percussion to the song.
+            <br>
+            Don't worry about saving up money for studio time, click on <span>RECORD</span> to save your
+            musical masterpieces!
+            <br>
+            When you want to switch it up and test your mental capacity, click on <span>MEMORY GAME</span> and try your luck at remebering the sequence!
+            <p class="enjoy"> enjoy!</p>
+            <button id="jam">Start Jamming!</button>
+        </div>
+    </div>
+
     <header class="header-container">
         <nav class="other-func">
             <span id="HL1" class="headerL">Record</span>
@@ -25,40 +54,8 @@
         </nav>
     </header>
 
-    <div id="about-container">
-        <div id="about">
-            
-            <p class="instructions">Below there are 8 gold squares labelled A, S, D, F, J, K, L, and Semicolon (;). 
-                Underneath the label is the sound made when that key is pressed on the keyboard. Go ahead, try it, I'll wait.
-                <br><br>
-                The sounds made are  <a href="https://en.wikipedia.org/wiki/Cowbell_(instrument)">COWBELL</a>,  <a href="https://en.wikipedia.org/wiki/Hi-hat">HIHAT</a>,  <a href="https://en.wikipedia.org/wiki/Bass_drum">KICK</a>, 
-                 <a href="https://en.wikipedia.org/wiki/Hi-hat">OPEN HIHAT</a>,  <a href="https://en.wikipedia.org/wiki/Snare_drum">SNARE</a>, <a href='https://en.wikipedia.org/wiki/Tom-tom_drum'>TOM</a>, <a href="https://en.wikipedia.org/wiki/Ride_cymbal">RIDE CYMBAL</a>, and  <a href="https://en.wikipedia.org/wiki/Crash_cymbal">CRASH CYMBAL</a>.
-                Don't know what any of those words mean? Don't fret, click on each sound name above to learn more!
-                <br><br>
-                Press on keys simultaneously or one at a time, just make some good beats!
-                Once you feel you can hold down a steady beat, click on one of the drumless tracks to your left,
-                and try to add some percussion to the song.
-                <br><br>
-                Don't worry about saving up money for studio time, click on <span>RECORD</span> on the top left to save your musical masterpieces!
-                <br><br>
-                When you want to switch it up and test your mental capacity, click on <span>MEMORY GAME</span> on the top left, and try your luck at remebering the sequence!
-                <p class="enjoy"> enjoy!</p>
-            
-            
-            <button id="close2">Close</button>
-        </div>
-    </div>
-
     <section class="main">
         <div class="track-cont">
-            <div id="popup-container">
-                <div id="popup" class="coming-soon">
-                    <!-- <p>Coming Soon!</p> -->
-                    <img src="./images/coming_soon.jpeg" alt="coming soon">
-                    <button id="close">Close</button>
-                </div>
-            </div>
-    
             <nav class="drumless">
                 <div>
                     <p>Drumless Tracks</p>
@@ -67,6 +64,14 @@
             <div>
                 <label for="volume›" class="vol-label">Volume</label>
                 <input type="range" id="volume" min="0" max="2" value="1" step=".2">
+            </div>
+        </div>
+
+        <div id="popup-container">
+            <div id="popup" class="coming-soon">
+                <!-- <p>Coming Soon!</p> -->
+                <img src="./images/coming_soon.jpeg" alt="coming soon">
+                <button id="close">Close</button>
             </div>
         </div>
             <div id="whiplash">

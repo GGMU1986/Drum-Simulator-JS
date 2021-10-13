@@ -157,14 +157,13 @@ document.addEventListener("DOMContentLoaded", () => {
         popupContainer.classList.remove('show');
     })
 
-    
-    aboutbtn.addEventListener('click', () => {
-        aboutContainer.classList.add('show');
-    })
-   
+    //
+    // landing page stuff
+    //
 
-    close2.addEventListener('click', () => {
-        aboutContainer.classList.remove('show');
+    const jam = document.getElementById('jam')
+    jam.addEventListener('click', function(e) {
+        document.getElementById('about-container').classList.add('bye');
     })
     
     //
