@@ -173,41 +173,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-    canvas.width = 800;
-    canvas.height = 400;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const colors = ['red', 'blue', 'green', 'white', 'yellow', 'purple', 'orange', 'gray', 'pink', 'lightblue']
 
-    const circ = function drawCirlce() {
-        ctx.fillStyle = 'white';
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-
-    class Ball {
+    class Balloon {
         constructor() {
-            this.x = Math.random * canvas.width;
-            this.y = Math.random * canvas.height;
-            this.size = Math.random() * 5; // sets radius between 0 & 50
-            this.velX = Math.random() * 4 - 2; // sets a number btw -2 & 2
-            this.velY = Math.random() * 4 - 2; // sets a number btw -2 & 2
+            this.x = Math.round(Math.random() * 1150);
+            this.y = Math.round(Math.random() * 800);
+            this.size = Math.round(Math.random() * 50); // sets radius between 0 & 50
+            this.velX = Math.random() * 10 - 2; // sets a number btw -5 & 5
+            this.velY = Math.random() * 10 - 2; // sets a number btw -5 & 5
         }
 
         // updates random x, y position each time we call animate in loop
-        update() {
-            this.x += this.velX;
-            this.y += this.velY;
-        }
+        // update() {
+        //     this.x += this.velX;
+        //     this.y += this.velY;
+        // }
 
-        // draws a new ball 
+        // draws a new balloon
         draw() {
-                circ();
-            }
+            ctx.fillStyle = colors[Math.floor(Math.random() * colors.length - 1)];
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.closePath();
         }
     }
 
+    // function makeBalloons() {
+    //     for (let i = 0; i < 10; i++) {
+    //         balloonArr.push(new Balloon());
+    //     }
+    // }
+    //makeBalloons();
+    // console.log(balloonArr);
+
+    // function moveBalloon() {
+    //     for (let i = 0; i < balloonArr.length; i++) {
+    //         balloonArr[i].update();
+    //         balloonArr[i].draw();
+    //     }
+    //     // if (i === balloonArr.length - 1) i = 0;
+    // }
+
+    // function animate(balloon) {
+    //     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //     balloon.update();
+    //     balloon.draw();    
+    //     requestAnimationFrame(animate);
+    // }
+
+    // animate();
+
     window.addEventListener('keydown', function(e) {
-        const ball = new Ball();
-        // ball.update();
-        // ball.draw();
-        console.log(ball)
-    });
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const balloon1 = new Balloon()
+        const balloon2 = new Balloon()
+        const balloon3 = new Balloon()
+        balloon1.draw()
+        balloon2.draw()
+        balloon3.draw()
+        // const balloon = new Balloon();
+        // animate(balloon); 
+        // console.log(this);
+    }) 
 });
