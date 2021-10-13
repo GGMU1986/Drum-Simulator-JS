@@ -137,18 +137,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const volume = document.getElementById('volume');
     volume.addEventListener('input', changeVolume)
     
-    // Pop ups for RECORD, MEMORY GAME and ABOUT
+    // Pop up for RECORD and MEMORY GAME
 
-    const otherFunc = document.querySelectorAll('.headerL')
+    const soon = document.querySelectorAll('.soon')
     const popupContainer = document.getElementById('popup-container')
     const close = document.getElementById('close')
-    const aboutbtn = document.getElementById('aboutbtn')
-    const aboutContainer = document.getElementById('about-container')
-    const close2 = document.getElementById('close2')
 
-
-    otherFunc.forEach(btn => {
-        btn.addEventListener('click', () => {
+    soon.forEach(el => {
+        el.addEventListener('click', () => {
             popupContainer.classList.add('show');
         })
     })
