@@ -306,6 +306,18 @@ button:hover {
   color: goldenrod;
 }
 
+.canvas-conatiner {
+  margin: 20px;
+  width: 500px;
+  height: 450px;
+}
+
+#canvas1 {
+  padding: 20px;
+  height: 400px;
+  width: 400px;
+}
+
 @media screen and (max-width: 1200px) {
   section {
     height: 550px;

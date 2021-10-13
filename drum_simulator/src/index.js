@@ -172,18 +172,58 @@ document.addEventListener("DOMContentLoaded", () => {
     // canvas in middle of screen
     //
 
-    // let canvas = document.getElementById('canvas1');
-    // let ctx = canvas.getContext('2d');
-    // // // canvas.width = window.innerWidth;
-    // // // canvas.height = window.innerHeight;
-    // // console.log(ctx);
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = 800;
+    canvas.height = 400;
 
-    // // // ctx.beginPath();
-    // ctx.fillStyle = 'green';
-    // ctx.fillRect(700, 500, 50, 50)
-    // // ctx.arc(500, 500, 50, 0, Math.PI * 2);
-    
-    // // ctx.closePath();
-    
+    class Ball {
+        constructor() {
+            this.x = Math.random * canvas.width;
+            this.y = Math.random * canvas.height;
+            this.size = Math.random() * 5; // sets radius between 0 & 50
+            this.velX = Math.random() * 4 - 2; // sets a number btw -2 & 2
+            this.velY = Math.random() * 4 - 2; // sets a number btw -2 & 2
+        }
 
-});
+        // updates ram x, y position each time we call animate in loop
+        update() {
+            this.x += this.velX;
+            this.y += this.velY;
+        }
+
+        // draws a new ball 
+        draw() {
+            function drawCirlce() {
+                ctx.fillStyle = 'white';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+        }
+    }
+
+    // const mouse = {
+    //     x: undefined,
+    //     y: undefined,
+    // }
+
+    // canvas.addEventListener('click', function(e) {
+    //     mouse.x = e.x;
+    //     mouse.y = e.y;
+    //     circ();
+    // })
+
+    // canvas.addEventListener('mousemove', function (e) {
+    //     mouse.x = e.x;
+    //     mouse.y = e.y;
+    //     circ();
+    // })
+
+    
+    // function animate() {
+    //     ctx.clearRect(0, 0, 800, 400);
+    //     circ();
+    //     requestAnimationFrame(animate);
+    // }
+    // animate();
+}
