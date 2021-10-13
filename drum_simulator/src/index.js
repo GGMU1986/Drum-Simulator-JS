@@ -1,8 +1,7 @@
     // things to do:
-    //  1. github / linkedin pic in links
-    //  2. Make app responsive on different screens
-    //  3. Move code to different folders
-    //  4. Audio Visualizer with canvas 
+    //  1. Keydown animations
+    //  2. Move code to different folders
+     
 
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -177,6 +176,12 @@ document.addEventListener("DOMContentLoaded", () => {
     canvas.width = 800;
     canvas.height = 400;
 
+    const circ = function drawCirlce() {
+        ctx.fillStyle = 'white';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+
     class Ball {
         constructor() {
             this.x = Math.random * canvas.width;
@@ -186,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
             this.velY = Math.random() * 4 - 2; // sets a number btw -2 & 2
         }
 
-        // updates ram x, y position each time we call animate in loop
+        // updates random x, y position each time we call animate in loop
         update() {
             this.x += this.velX;
             this.y += this.velY;
@@ -194,36 +199,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // draws a new ball 
         draw() {
-            function drawCirlce() {
-                ctx.fillStyle = 'white';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
+                circ();
+            }
         }
     }
 
-    // const mouse = {
-    //     x: undefined,
-    //     y: undefined,
-    // }
-
-    // canvas.addEventListener('click', function(e) {
-    //     mouse.x = e.x;
-    //     mouse.y = e.y;
-    //     circ();
-    // })
-
-    // canvas.addEventListener('mousemove', function (e) {
-    //     mouse.x = e.x;
-    //     mouse.y = e.y;
-    //     circ();
-    // })
-
-    
-    // function animate() {
-    //     ctx.clearRect(0, 0, 800, 400);
-    //     circ();
-    //     requestAnimationFrame(animate);
-    // }
-    // animate();
-}
+    window.addEventListener('keydown', function(e) {
+        const ball = new Ball();
+        // ball.update();
+        // ball.draw();
+        console.log(ball)
+    });
+});
