@@ -187,6 +187,8 @@ document.addEventListener("DOMContentLoaded", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    // FIX BELOW TO SHOW TEXT
+
     // const SOUNDS = [
     //     ["KeyA", "COWBELL"],
     //     ["KeyS", "HIHAT"],
