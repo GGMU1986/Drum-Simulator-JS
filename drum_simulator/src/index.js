@@ -2,6 +2,9 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     
+    //
+    // Creating audio tags and giving them the drum sound source 
+    //
 
     const SOUNDS = [
         ["KeyA", "COWBELL"],
@@ -18,12 +21,17 @@ document.addEventListener("DOMContentLoaded", () => {
         let audio = document.createElement("audio");
         const audioDiv = document.getElementById("audio-tags");
         audioDiv.append(audio);
-        let src = "./sounds/" + pair[1] + ".wav";
+        let src = "./drum_simulator/sounds/" + pair[1] + ".wav";
         audio.src = src;
         audio.dataset.key = `${pair[0]}`;
         audio.id = `${i + 1}` 
     })
-    
+
+    //
+    // Adding event listener so when appropriate key is pressed the drums sound is made
+    // Adding class of playing when key is pressed for visual appearance
+    //
+
     window.addEventListener('keydown', function(e) {
         const audio = document.querySelector(`audio[data-key="${e.code}"]`)
         const key = document.querySelector(`.key[data-key="${e.code}"]`)
@@ -35,6 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function removeClass(e) {
         this.classList.remove('playing');
     }
+
+    //
+    // Added event listener so when CSS transition on visual appearance ends
+    // playing class will be removed
+    //
 
     const keys = document.querySelectorAll(".key")
 
@@ -73,13 +86,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const audioDiv = document.getElementById("audio-tags");
         let audio = document.createElement("audio")
         audio.setAttribute("loop", "true")
-        let src = "./sounds/" + track[0] + ".wav";
+        let src = "./drum_simulator/sounds/" + track[0] + ".wav";
         audio.src = src;
         audio.dataset.song = track[0];
         audio.classList.add("track")
         audio.id = `t${i + 1}`; 
         audioDiv.append(audio);
     })
+
+    //
+    // Added event listeners so when button is pressed track is played/stopped
+    // Added logic to change inner Text on button between Play/Pause
+    //
 
     function playSound(e) {
         const track = document.querySelector(`audio[data-song="${e.target.id}"]`);
@@ -121,7 +139,9 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener('click', stopSound);
     }); 
 
+    //
     // Adjusting volume
+    //
 
     function changeVolume(e) {
         const newVol = e.target.value;
@@ -132,7 +152,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const volume = document.getElementById('volume');
     volume.addEventListener('input', changeVolume)
     
-    // Pop up for RECORD and MEMORY GAME
+    //
+    // Pop up of 'Coming Soon' for RECORD and MEMORY GAME
+    //
 
     const soon = document.querySelectorAll('.soon')
     const popupContainer = document.getElementById('popup-container')
@@ -158,27 +180,28 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     
     //
-    // canvas in middle of screen
+    // Animation on canvas with keydown events
     //
 
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    const colors = [
-        'red', 'blue', 'green', 'white', 'yellow', 'purple', 
-        'orange', 'gray', 'pink', 'lightblue', 'navy', 'maroon', 
-        'teal', 'cyan', 'olive', 'silver', 'brown', 'slategray' , 'honeydew'
-]
+    const COLORS = [
+        'red', 'blue', 'green', 'white', 'yellow', 
+        'purple', 'orange', 'gray', 'pink', 'lightblue', 
+        'navy', 'maroon', 'teal', 'cyan', 'olive', 
+        'silver', 'brown', 'slategray' , 'honeydew'
+    ]
 
     class Balloon {
         constructor() {
-            this.x = Math.round(Math.random() * 1150);
+            this.x = Math.round(Math.random() * 1450);
             this.y = Math.round(Math.random() * 800);
             this.size = Math.round(Math.random() * 50); // sets radius between 0 & 50
             this.velX = Math.random() * 4 - 2; 
             this.velY = Math.random() * 4 - 2;
-            this.color = colors[Math.floor(Math.random() * colors.length - 1)];
+            this.color = COLORS[Math.floor(Math.random() * COLORS.length - 1)];
         }
 
         // updates random x, y position each time we call animate in loop
@@ -212,14 +235,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.addEventListener('keydown', function(e) {
         let balloons = [];
-        //ctx.clearRect(0, 0, 1450, 800);
         for (let i = 0; i < 3; i++) {
             balloons.push(new Balloon());
-        }//const balloon2 = new Balloon();
+        }
         animate(...balloons) 
-        //animate(balloon2) 
     }) 
 
+    //
+    // Easter Egg gifs
+    //
 
     const IMAGES = [
         ['KeyG', 'whiplash'],
