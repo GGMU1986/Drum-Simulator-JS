@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let src = "./drum_simulator/sounds/" + pair[1] + ".wav";
         audio.src = src;
         audio.dataset.key = `${pair[0]}`;
-        audio.id = `${i + 1}` 
     })
 
     //
@@ -187,6 +186,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
+    // const SOUNDS = [
+    //     ["KeyA", "COWBELL"],
+    //     ["KeyS", "HIHAT"],
+    //     ["KeyD", "KICK"],
+    //     ["KeyF", "OPENHIHAT"],
+    //     ["KeyJ", "SNARE"],
+    //     ["KeyK", "TOM"],
+    //     ["KeyL", "RIDE"],
+    //     ["Semicolon", "CRASH"],
+    // ]
+    
+    // function addText(e) {
+    //     SOUNDS.forEach(pair => {
+    //         if (e.code === pair[0]) {
+                
+                
+    //         }
+    //     })
+    // }
+    // console.log(SOUNDS[3][1]);
+    
+
+    // window.addEventListener('keydown', function(e) {
+    //     if (e.code === "KeyF") {
+    //         ctx.fillStyle = "white";
+    //         ctx.font = "bold 60px Arial";
+    //         ctx.fillText("SOUNDS[3][1]", 500, 500);
+    //     }
+    // }
+
     const COLORS = [
         'red', 'blue', 'green', 'white', 'yellow', 
         'purple', 'orange', 'gray', 'pink', 'lightblue', 
@@ -239,8 +269,8 @@ document.addEventListener("DOMContentLoaded", () => {
             balloons.push(new Balloon());
         }
         animate(...balloons) 
-    }) 
-
+    })
+    
     //
     // Easter Egg gifs
     //
