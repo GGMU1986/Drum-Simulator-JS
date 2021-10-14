@@ -165,7 +165,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    const colors = ['red', 'blue', 'green', 'white', 'yellow', 'purple', 'orange', 'gray', 'pink', 'lightblue', '']
+    const colors = [
+        'red', 'blue', 'green', 'white', 'yellow', 'purple', 
+        'orange', 'gray', 'pink', 'lightblue', 'navy', 'maroon', 
+        'teal', 'cyan', 'olive', 'silver', 'brown', 'slategray' , 'honeydew'
+]
 
     class Balloon {
         constructor() {
@@ -181,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
         update() {
             this.x += this.velX;
             this.y += this.velY;
-            if (this.size > 1) this.size -= 1
+            if (this.size > 0.2) this.size -= 0.1
         }
 
         // draws a new balloon
@@ -196,6 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function animate(balloon1, balloon2, balloon3) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
         balloon1.update();
         balloon1.draw();
         balloon2.update();
