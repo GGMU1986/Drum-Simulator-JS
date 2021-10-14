@@ -179,7 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // updates random x, y position each time we call animate in loop
         update() {
-            // ctx.clearRect(0, 0, canvas.width, canvas.height);
             this.x += this.velX;
             this.y += this.velY;
             if (this.size > 1) this.size -= 1
