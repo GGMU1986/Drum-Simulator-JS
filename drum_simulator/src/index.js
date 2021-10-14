@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    const colors = ['red', 'blue', 'green', 'white', 'yellow', 'purple', 'orange', 'gray', 'pink', 'lightblue']
+    const colors = ['red', 'blue', 'green', 'white', 'yellow', 'purple', 'orange', 'gray', 'pink', 'lightblue', '']
 
     class Balloon {
         constructor() {
@@ -173,7 +173,8 @@ document.addEventListener("DOMContentLoaded", () => {
             this.y = Math.round(Math.random() * 800);
             this.size = Math.round(Math.random() * 50); // sets radius between 0 & 50
             this.velX = Math.random() * 4 - 2; 
-            this.velY = Math.random() * 4 - 2; 
+            this.velY = Math.random() * 4 - 2;
+            this.color = colors[Math.floor(Math.random() * colors.length - 1)];
         }
 
         // updates random x, y position each time we call animate in loop
@@ -181,14 +182,12 @@ document.addEventListener("DOMContentLoaded", () => {
             // ctx.clearRect(0, 0, canvas.width, canvas.height);
             this.x += this.velX;
             this.y += this.velY;
-            //this.size += Math.floor(Math.random())
+            if (this.size > 1) this.size -= 1
         }
 
         // draws a new balloon
         draw() {
-            //ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = colors[Math.floor(Math.random() * colors.length - 1)];
-            //ctx.fillStyle = 'white'
+            ctx.fillStyle = this.color;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
@@ -196,19 +195,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function animate(balloon) {
-        if (balloon.x > 1150 || balloon.y > 800) return;
+    function animate(balloon1, balloon2, balloon3) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        balloon.update();
-        balloon.draw();
-        requestAnimationFrame(() => { animate(balloon) });
+        balloon1.update();
+        balloon1.draw();
+        balloon2.update();
+        balloon2.draw();
+        balloon3.update();
+        balloon3.draw();
+        requestAnimationFrame(() => { animate(balloon1, balloon2, balloon3) });
     }
 
     document.addEventListener('keydown', function(e) {
+        let balloons = [];
         //ctx.clearRect(0, 0, 1450, 800);
-        const balloon1 = new Balloon();
-        //const balloon2 = new Balloon();
-        animate(balloon1) 
+        for (let i = 0; i < 3; i++) {
+            balloons.push(new Balloon());
+        }//const balloon2 = new Balloon();
+        animate(...balloons) 
         //animate(balloon2) 
     }) 
 
