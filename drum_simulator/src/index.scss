@@ -232,8 +232,8 @@ aside {
 
 button {
   margin: 5px;
-  padding: 15px;
-  font-size: 20px;
+  padding: 5px;
+  font-size: 17px;
   background-color: white;
   color: black;
   font-family: inherit;
@@ -333,6 +333,23 @@ figure {
   font-size: 20px;
   font-family: 'Permanent Marker', cursive;
 
+}
+
+#jam{
+  margin: 5px;
+  padding: 15px;
+  font-size: 17px;
+  background-color: white;
+  color: black;
+  font-family: inherit;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#jam:hover {
+  background: goldenrod;
+  color: white;
+  cursor: pointer;
 }
 
 .avatar{
