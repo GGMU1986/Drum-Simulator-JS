@@ -232,17 +232,19 @@ aside {
 
 button {
   margin: 5px;
-  padding: 5px;
-  font-size: 17px;
+  padding: 15px;
+  font-size: 20px;
   background-color: white;
   color: black;
   font-family: inherit;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover {
   background: goldenrod;
   color: white;
+  cursor: pointer;
 }
 
 #popup-container {
@@ -324,7 +326,19 @@ figure {
 
 .welcome {
   color: white;
-  font-size: 80px;
+  font-size: 95px;
+}
+
+.splash-creator{
+  font-size: 20px;
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+.avatar{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
 
 .enjoy {
