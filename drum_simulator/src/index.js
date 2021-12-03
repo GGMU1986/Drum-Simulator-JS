@@ -170,6 +170,14 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     //
+    // About button pop up
+    //
+
+    const about = document.querySelector('about-popup')
+    
+
+
+    //
     // landing page stuff
     //
 
