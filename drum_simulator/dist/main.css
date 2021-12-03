@@ -72,6 +72,13 @@ footer {
   align-items: center;
 }
 
+.copyright-container {
+  width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .creator {
   display: flex;
   flex: space-around;
@@ -100,7 +107,7 @@ footer {
   color: #0e76a8;
 }
 
-footer > p, .creator > span {
+footer > .copyright-container, .creator > span {
   font-size: 20px;
   text-shadow: 2px 2px goldenrod;
 }
@@ -277,6 +284,10 @@ figure {
 
 .splash-words {
   font-family: "Permanent Marker", cursive;
+}
+
+.copyright {
+  font-size: 30px;
 }
 
 .glow {
