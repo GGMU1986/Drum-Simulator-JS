@@ -173,9 +173,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // About button pop up
     //
 
-    const about = document.querySelector('about-popup')
-    
+    const about = document.getElementById('about-btn')
+    const aboutClose = document.getElementById('about-close')
+    const aboutPopup = document.getElementById('about-popup-container') 
 
+    about.addEventListener('click', () => {
+      aboutPopup.classList.add('show');
+    })
+
+    aboutClose.addEventListener('click', () => {
+        aboutPopup.classList.remove('show');
+    })
 
     //
     // landing page stuff

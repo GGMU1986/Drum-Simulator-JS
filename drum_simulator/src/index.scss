@@ -288,6 +288,18 @@ button:hover {
 // about popup msg
 //
 
+#about-btn{
+  font-size: 25px;
+}
+
+#about-popup-container{
+  display: none;
+}
+
+#about-popup-container.show{
+  display: block;
+}
+
 #about-popup{
   display: flex;
   flex-direction: column;
@@ -395,7 +407,7 @@ figure {
 #jam{
   margin: 5px;
   padding: 15px;
-  font-size: 17px;
+  font-size: 20px;
   background-color: white;
   color: black;
   font-family: inherit;
