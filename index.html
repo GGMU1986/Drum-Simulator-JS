@@ -17,10 +17,11 @@
     <div id="about-container">
 
         <div id="about">
-            <p class="welcome">Welcome to the Drum Simulator</p>
+            <p class="welcome glow">Welcome to the Drum Simulator</p>
             <br>
-            <p>There are 8 gold squares labelled A, S, D, F, J, K, L, and Semicolon (;).
-            <p>Underneath the label is the sound made when that key is pressed on the keyboard.</p>
+            <p class="splash-words">
+              <!-- There are 8 gold squares labelled A, S, D, F, J, K, L, and Semicolon (;). -->
+            <!-- <p>Underneath the label is the sound made when that key is pressed on the keyboard.</p>
                 The sounds made are <a href="https://en.wikipedia.org/wiki/Cowbell_(instrument)">COWBELL</a>, <a
                     href="https://en.wikipedia.org/wiki/Hi-hat">HIHAT</a>, <a href="https://en.wikipedia.org/wiki/Bass_drum">KICK</a>,
                 <a href="https://en.wikipedia.org/wiki/Hi-hat">OPEN HIHAT</a>, <a
@@ -28,17 +29,25 @@
                     href='https://en.wikipedia.org/wiki/Tom-tom_drum'>TOM</a>, <a href="https://en.wikipedia.org/wiki/Ride_cymbal">RIDE
                     CYMBAL</a>, and <a href="https://en.wikipedia.org/wiki/Crash_cymbal">CRASH CYMBAL</a>.
                     Don't know what any of those words mean? Don't fret, click on each sound name above to learn more!</p>
-                    <br>
-            Press on keys simultaneously or one at a time, just make some good beats!
+                    <br> -->
+            <!-- Press on keys simultaneously or one at a time, just make some good beats!
             Once you feel you can hold down a steady beat, click on one of the drumless tracks
-            and try to add some percussion to the song.
-            <br>
+            and try to add some percussion to the song. <br> -->
+            <!-- <br>
             Don't worry about saving up money for studio time, just click on <span>RECORD</span> to save your
             musical masterpieces!
             <br>
             When you want to switch it up and test your mental capacity, click on <span>MEMORY GAME</span> and try your luck at remembering the sequence!
-            <p class="enjoy"> enjoy!</p>
+            <p class="enjoy"> enjoy!</p> -->
             <button id="jam">Start Jamming!</button>
+            <div class="gitin">
+              <a href="https://github.com/GGMU1986" target="blank"><i class="fab fa-github" ></i></a>
+              <a href="https://www.linkedin.com/in/george-tsimis-a5986224/" target="blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://angel.co/u/george-tsimis" target="blank"><i class="fab fa-angellist"></i></a>
+              <a href="" target="blank"><i class="fas fa-user-tie"></i></a>
+            </div>
+            <img  class="avatar" src="./drum_simulator/images/avatar.png" alt="Avatar">
+            <p class="splash-creator">Created by George Tsimis using Vanilla JavaScript, HTML, CSS, Web Audio API and Canvas API</p>
         </div>
     </div>
 
@@ -49,7 +58,8 @@
 
         <h1>Drum Simulator</h1>
 
-        <nav class="ext-links">      
+        <nav class="ext-links">
+            <span class="about-btn">About</span>    
             <span class="soon">Memory Game</span>
         </nav>
     </header>
@@ -67,13 +77,37 @@
             </div>
         </div>
 
+        <div id="about-popup-container">
+          <div id="about-popup">
+            <div id='about-msg'>
+              <p>Below are 8 keys labelled A, S, D, F, J ,K ,L, AND Semicolon. When keyed down 
+                they make a sound from a traditional drumkit.</p><br>
+              <p>
+                Press on keys simultaneously or one at a time, just make some good beats!
+                Once you feel you can hold down a steady beat, click on one of the drumless tracks
+                and try to add some percussion to the song.
+              </p>
+              <br>
+              <p>
+                Don't worry about saving up money for studio time, just click on <span class="game">RECORD</span> to save your
+                musical masterpieces!
+              </p>
+              <br>
+              <p>
+                When you want to switch it up and test your mental capacity, click on <span class="game">MEMORY GAME</span> and try your luck at
+                remembering the sequence!
+              </p>
+            </div>
+            <button id='about-close'>Close</button>
+          </div>
+        </div>
+
         <div id="popup-container">
             <div id="popup">
-                <figure>
-                    <img src="./drum_simulator/images/coming_soon.jpeg" alt="coming soon">
-                    <!-- <img src="./images/mutombo.webp" alt="mutombo" width="400"> -->
-                </figure>
-                <button id="close">Close</button>
+              <figure>
+                  <img src="./drum_simulator/images/coming_soon.jpeg" alt="coming soon">
+              </figure>
+              <button id="close">Close</button>
             </div>
         </div>
             <div id="whiplash">
@@ -148,14 +182,19 @@
     </div>
 
     <footer>
-        <p>Copyright Drum Simulator 2021</p>
+        <div class="copyright-container">
+          <p class="copyright">&copy;</p>
+          <p>Copyright Drum Simulator 2021</p>
+        </div>
         <span>All the World's a Stage ...</span>
         <div class="creator">
             <span>Created by George Tsimis</span>
             
             <div class="gitin">
                 <a href="https://github.com/GGMU1986"><i class="fab fa-github"></i></a> 
-                <a href="https://www.linkedin.com/in/george-tsimis-a5986224/"><i class="fab fa-linkedin-in"></i></a> 
+                <a href="https://www.linkedin.com/in/george-tsimis-a5986224/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://angel.co/u/george-tsimis" target="blank"><i class="fab fa-angellist"></i></a>
+                <a href="" target="blank"><i class="fas fa-user-tie tie"></i></a>
             </div>
         </div>
     </footer>
