@@ -186,6 +186,18 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     //
+    // Jim keydown gif
+    //
+
+    const jimClose = document.getElementById('jim-close')
+    const keyCont = document.querySelector('.keydown-container')
+    
+    jimClose.addEventListener('click', () => {
+        keyCont.classList.add('hide');
+    })
+    
+
+    //
     // landing page stuff
     //
 

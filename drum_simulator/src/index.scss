@@ -29,6 +29,35 @@ ol, ul {
 }
 
 //
+// keydown intro
+//
+
+.keydown-container{
+  text-align: center;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  left: 25%;
+}
+
+.keydown-container.hide{
+  display: none;
+}
+
+#jim-close{
+  display: inline-block;
+  width: 100px;
+  position: absolute;
+  bottom: 25%;
+  left: 100%;
+}
+
+
+//
 // header CSS
 //
 

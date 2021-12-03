@@ -20,25 +20,6 @@
             <p class="welcome glow">Welcome to the Drum Simulator</p>
             <br>
             <p class="splash-words">
-              <!-- There are 8 gold squares labelled A, S, D, F, J, K, L, and Semicolon (;). -->
-            <!-- <p>Underneath the label is the sound made when that key is pressed on the keyboard.</p>
-                The sounds made are <a href="https://en.wikipedia.org/wiki/Cowbell_(instrument)">COWBELL</a>, <a
-                    href="https://en.wikipedia.org/wiki/Hi-hat">HIHAT</a>, <a href="https://en.wikipedia.org/wiki/Bass_drum">KICK</a>,
-                <a href="https://en.wikipedia.org/wiki/Hi-hat">OPEN HIHAT</a>, <a
-                    href="https://en.wikipedia.org/wiki/Snare_drum">SNARE</a>, <a
-                    href='https://en.wikipedia.org/wiki/Tom-tom_drum'>TOM</a>, <a href="https://en.wikipedia.org/wiki/Ride_cymbal">RIDE
-                    CYMBAL</a>, and <a href="https://en.wikipedia.org/wiki/Crash_cymbal">CRASH CYMBAL</a>.
-                    Don't know what any of those words mean? Don't fret, click on each sound name above to learn more!</p>
-                    <br> -->
-            <!-- Press on keys simultaneously or one at a time, just make some good beats!
-            Once you feel you can hold down a steady beat, click on one of the drumless tracks
-            and try to add some percussion to the song. <br> -->
-            <!-- <br>
-            Don't worry about saving up money for studio time, just click on <span>RECORD</span> to save your
-            musical masterpieces!
-            <br>
-            When you want to switch it up and test your mental capacity, click on <span>MEMORY GAME</span> and try your luck at remembering the sequence!
-            <p class="enjoy"> enjoy!</p> -->
             <button id="jam">Start Jamming!</button>
             <div class="gitin">
               <a href="https://github.com/GGMU1986" target="blank"><i class="fab fa-github" ></i></a>
@@ -54,13 +35,13 @@
     <header class="header-container">
         <nav class="other-func">
             <span class="soon">Record</span>
+            <span class="soon">Memory Game</span>
         </nav>
 
         <h1>Drum Simulator</h1>
 
         <nav class="ext-links">
-            <span class="about-btn">About</span>    
-            <span class="soon">Memory Game</span>
+            <span id="about-btn">About</span>    
         </nav>
     </header>
 
@@ -75,6 +56,7 @@
                 <label for="volume›" class="vol-label">Volume</label>
                 <input type="range" id="volume" min="0" max="2" value="1" step=".2">
             </div>
+            
         </div>
 
         <div id="about-popup-container">
@@ -125,7 +107,11 @@
                 <img src="./drum_simulator/images/monkey.gif" alt="whiplash" width='300' height='300'>
             
             </div>
-            
+            <div class="keydown-container">
+              <img src="./drum_simulator/images/keydown-jim.webp" alt="Keydown Jim">
+              <p class>Key down to make sounds. <br> Don't Click! 😁</p>
+              <button id="jim-close">Close</button>
+            </div>
             <canvas id="canvas"></canvas>
             
 
