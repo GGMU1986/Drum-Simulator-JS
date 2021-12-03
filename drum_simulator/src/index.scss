@@ -1,7 +1,7 @@
 // Permanent Marker import from google fonts
 @import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Meow+Script&family=Open+Sans:wght@500&display=swap');
 //
 // CSS reset
 //
@@ -280,6 +280,8 @@ figure {
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #about {
@@ -287,13 +289,42 @@ figure {
   color: white;
   text-align: center;
   font-size: 30px;
-  margin: 20px;
+  margin: 20%;
   padding: 10px;
+}
+
+.splash-words{
+  // margin: 20%;
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+.glow {
+  font-family: 'Meow Script', cursive;
+  // font-size: px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.tie{
+  color: black;
 }
 
 .welcome {
   color: white;
-  font-size: 40px;
+  font-size: 80px;
 }
 
 .enjoy {
