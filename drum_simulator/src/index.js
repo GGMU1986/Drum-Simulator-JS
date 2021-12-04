@@ -7,21 +7,38 @@ document.addEventListener("DOMContentLoaded", () => {
     //
 
     const SOUNDS = [
-        ["KeyA", "COWBELL"],
-        ["KeyS", "HIHAT"],
-        ["KeyD", "KICK"],
-        ["KeyF", "OPENHIHAT"],
-        ["KeyJ", "SNARE"],
-        ["KeyK", "TOM"],
-        ["KeyL", "RIDE"],
-        ["Semicolon", "CRASH"],
+      ["KeyA", "COWBELL"],
+      ["KeyS", "HIHAT"],
+      ["KeyD", "KICK"],
+      ["KeyF", "OPENHIHAT"],
+      ["KeyJ", "SNARE"],
+      ["KeyK", "TOM"],
+      ["KeyL", "RIDE"],
+      ["KeyC", "DJ"]
+      ["Semicolon", "CRASH"],
     ]
 
-    SOUNDS.forEach((pair, i) => {
+    const SOUNDS2 = [
+      ["KeyE", "kawhi"],
+      ["KeyR", "cartoon-jump"],
+      ["KeyI", "sitcom-laugh"],
+      ["KeyO", "batman"],
+    ]
+
+    SOUNDS.forEach(pair => {
         let audio = document.createElement("audio");
         const audioDiv = document.getElementById("audio-tags");
         audioDiv.append(audio);
         let src = "./drum_simulator/sounds/" + pair[1] + ".wav";
+        audio.src = src;
+        audio.dataset.key = `${pair[0]}`;
+    })
+    
+    SOUNDS2.forEach(pair => {
+        let audio = document.createElement("audio");
+        const audioDiv = document.getElementById("audio-tags");
+        audioDiv.append(audio);
+        let src = "./drum_simulator/sounds/" + pair[1] + ".mp3";
         audio.src = src;
         audio.dataset.key = `${pair[0]}`;
     })
@@ -251,7 +268,8 @@ document.addEventListener("DOMContentLoaded", () => {
         'red', 'blue', 'green', 'white', 'yellow', 
         'purple', 'orange', 'gray', 'pink', 'lightblue', 
         'navy', 'maroon', 'teal', 'cyan', 'olive', 
-        'silver', 'brown', 'slategray' , 'honeydew'
+        'silver', 'brown', 'slategray' , 'honeydew', 'violet', 
+        'antique ruby', 'blue-green', 'byzantine', 'cark orchid' 
     ]
 
     class Balloon {
