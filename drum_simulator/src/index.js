@@ -14,15 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
       ["KeyJ", "SNARE"],
       ["KeyK", "TOM"],
       ["KeyL", "RIDE"],
-      ["KeyC", "DJ"]
       ["Semicolon", "CRASH"],
     ]
-
+    
     const SOUNDS2 = [
       ["KeyE", "kawhi"],
       ["KeyR", "cartoon-jump"],
-      ["KeyI", "sitcom-laugh"],
+      ["KeyI", "gangsta-paradise"],
       ["KeyO", "batman"],
+      ["KeyC", "wizard"],
+      ["KeyN", "MK"],
+      ["KeyW", "dj"]
     ]
 
     SOUNDS.forEach(pair => {
