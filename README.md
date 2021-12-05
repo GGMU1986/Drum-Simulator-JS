@@ -1,6 +1,6 @@
 # Drum-Simulator-JS
 
-  **Overview**:
+  ### Overview:
 
 The [Drum Simulator](https://ggmu1986.github.io/Drum-Simulator-JS/) will allow the user to play drum sounds by pressing keys on the keyboard. Each key (only 8 keys) will correspond to a specific drum or cymbal in a standard drumset. The simulator will have the following pieces to be played by keys:
   1) Snare Drum
@@ -14,20 +14,22 @@ The [Drum Simulator](https://ggmu1986.github.io/Drum-Simulator-JS/) will allow t
 
 <img src="https://user-images.githubusercontent.com/8636103/144727610-23570fe9-6704-4c75-96aa-4fb4118a4640.jpeg" width="600" height="400" /><img src="https://user-images.githubusercontent.com/8636103/144727847-96a8b869-c591-4bd4-a468-814acd6bd488.jpg" width="200" height="200" />
 
-  **FUNCTIONALITY & MVPs**:
+  ### FUNCTIONALITY & MVPs:
 
  With this Drum Simulator, users will be able to:
 
   - Read through an About modal to explain functionality. 
   - Press keys on keyboard and play drum/cymbal sounds in a free-style mode.
   - Add percussion to preloaded drumless tracks.
+  - Have Balloons created with each key down that float off in random directions for a visual effect.
   - Play an interactive game, in which, the user will need to remember a pattern of drum sounds and play them back in correct order. (Bonus)
   - Record pieces of music they created to listen to them later. (Bonus)
-  - Have Balloons created with each key down that float off in random directions for a visual effect.
-  
-  
-<!--   ![Screen-Recording-2021-12-04-at-7](https://user-images.githubusercontent.com/8636103/144729665-619d767f-8337-4302-b310-485a5ec99a67.gif) -->
+ 
   <img src="https://user-images.githubusercontent.com/8636103/144729665-619d767f-8337-4302-b310-485a5ec99a67.gif" width="800" height="500" />
+  
+  ### HIGHLIGHTS:
+  
+  The setting up of audio tags holding the drum sound source and adding event listeners for the the keydown of the key for the specific sounds.
   
   ```js script
   const SOUNDS = [
@@ -49,7 +51,17 @@ The [Drum Simulator](https://ggmu1986.github.io/Drum-Simulator-JS/) will allow t
         audio.src = src;
         audio.dataset.key = `${pair[0]}`;
     })
+    
+     window.addEventListener('keydown', function(e) {
+        const audio = document.querySelector(`audio[data-key="${e.code}"]`)
+        const key = document.querySelector(`.key[data-key="${e.code}"]`)
+        audio.currentTime = 0; // web audio API method that rewinds .wav to beginning on each keydown
+        audio.play();
+        key.classList.add('playing')
+    });
    ```
+   
+   The animation of the balloons provides a visual effect for the user.
    
 ```js script
      class Balloon {
@@ -117,7 +129,7 @@ The [Drum Simulator](https://ggmu1986.github.io/Drum-Simulator-JS/) will allow t
    - Labelled keys on the bottom of screen inform user which piece of drum set it corresponds to. -->
    
    
-   **TECHNOLOGIES, LIBRARIES, APIs**:
+   ### TECHNOLOGIES, LIBRARIES, APIs:
    
    This Project will be implmented with the following technologies:
    
@@ -125,6 +137,8 @@ The [Drum Simulator](https://ggmu1986.github.io/Drum-Simulator-JS/) will allow t
    - Canvas API 
    - Webpack to bundle the source JavaScript code.
    - npm to manage dependencies.
+   - Font Awesome
+   - Google Fonts
    
    
    
