@@ -1,8 +1,8 @@
 # Drum-Simulator-JS
 
-  **BACKGROUND**:
+  **Overview**:
 
-The Drum Simulator will allow the user to play drum sounds by pressing keys on the keyboard. Each key (only 8 keys) will correspond to a specific drum or cymbal in a standard drumset. The simulator will have the following pieces to be played by keys:
+The [Drum Simulator](https://ggmu1986.github.io/Drum-Simulator-JS/) will allow the user to play drum sounds by pressing keys on the keyboard. Each key (only 8 keys) will correspond to a specific drum or cymbal in a standard drumset. The simulator will have the following pieces to be played by keys:
   1) Snare Drum
   2) Hi-Hat
   3) Open Hi-Hat
