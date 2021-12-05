@@ -31,28 +31,27 @@ The Drum Simulator will allow the user to play drum sounds by pressing keys on t
    - A production README. -->
    
    
-   **WIREFRAMES**
+<!--    **WIREFRAMES**
    
   <img width="900"  src="https://user-images.githubusercontent.com/8636103/144728495-55bad54f-9c6a-4cb2-aea4-d7ee10eb8814.png">
    
    - Nav Links will include links to this project's Github repo, developer's LinkedIn and the About modal.
    - Other functionality nav bar allows user to click buttons to start playing memory game and record pieces of music.
-   - Labelled keys on the bottom of screen inform user which piece of drum set it corresponds to.
+   - Labelled keys on the bottom of screen inform user which piece of drum set it corresponds to. -->
    
    
    **TECHNOLOGIES, LIBRARIES, APIs**:
    
    This Project will be implmented with the following technologies:
    
-   - The Web Audio API to produce drum/cymbal.
-   - Canvas API for animations
-   - Freesound API to retrieve specific sounds needed for drumset.
+   - The Web Audio API 
+   - Canvas API 
    - Webpack to bundle the source JavaScript code.
    - npm to manage dependencies.
    
    
    
-   **IMPLEMENTED TIMEFRAMES**:
+<!--    **IMPLEMENTED TIMEFRAMES**:
 
   - **Friday Afternoon & Weekend**: Setup project, including getting webpack started. Reasearch Music/Audio APIs and Canvas on how to implement ideas. Start       writing the code to link sounds of drum/cymabls to correspond to pressing the correct keys on keyboard.
 
@@ -69,5 +68,5 @@ The Drum Simulator will allow the user to play drum sounds by pressing keys on t
 
   - Memory Game: user will try to re-enter random keys in correct order after hearing them once.
 
-  - Recording feature: user will have the option to record any music played in freestyle mode. 
+  - Recording feature: user will have the option to record any music played in freestyle mode.  -->
   
