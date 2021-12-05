@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
       ["KeyO", "batman"],
       ["KeyC", "wizard"],
       ["KeyN", "MK"],
-      ["KeyW", "dj"]
+      ["KeyW", "dj"],
+      ["KeyU", "arnold"],
+      ["KeyV", "mario"]
     ]
 
     SOUNDS.forEach(pair => {
