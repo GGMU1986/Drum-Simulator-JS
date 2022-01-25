@@ -291,8 +291,13 @@ button:hover {
   border-radius: 10px;
 }
 
+.soon {
+  cursor: pointer;
+}
+
 #about-btn {
   font-size: 25px;
+  cursor: pointer;
 }
 
 #about-popup-container {

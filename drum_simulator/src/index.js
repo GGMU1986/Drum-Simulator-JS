@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const stopbtns = document.querySelectorAll(".stop")
     stopbtns.forEach(btn => {
-        btn.addEventListener('click', stopSound);
+      btn.addEventListener('click', stopSound);
     }); 
 
     //
@@ -164,9 +164,9 @@ document.addEventListener("DOMContentLoaded", () => {
     //
 
     function changeVolume(e) {
-        const newVol = e.target.value;
-        const audios = document.querySelectorAll('audio');
-        audios.forEach(audio => audio.volume = newVol);
+      const newVol = e.target.value;
+      const audios = document.querySelectorAll('audio');
+      audios.forEach(audio => audio.volume = newVol);
     }
 
     const volume = document.getElementById('volume');

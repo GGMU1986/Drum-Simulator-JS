@@ -1,7 +1,9 @@
 // Permanent Marker import from google fonts
+
 @import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Meow+Script&family=Open+Sans:wght@500&display=swap');
+
 //
 // CSS reset
 //
@@ -19,7 +21,6 @@ html, body, div, span, h1, h2, h3, h4, a, ol, ul, li, form, label, article, asid
 body {
   line-height: 1.5;
   font-family: 'Permanent Marker', cursive;
-  //background-color: black;
   background-image: url(../images/background.jpeg);
   width: 100%;
 }
@@ -173,7 +174,6 @@ footer > span {
 }
 
 .key {
-  //background: linear-gradient(85deg, black, goldenrod);
   color: black;
   background-color: black;
   height: 85px;
@@ -192,10 +192,6 @@ footer > span {
   background-color: greenyellow;
   
 }
-
-// .main {
-//   height: 600px;
-// }
 
 .key > p {
   color: goldenrod;
@@ -316,8 +312,13 @@ button:hover {
 // about popup msg
 //
 
+.soon{
+  cursor: pointer;
+}
+
 #about-btn{
   font-size: 25px;
+  cursor: pointer;
 }
 
 #about-popup-container{
@@ -362,7 +363,6 @@ button:hover {
 }
 
 figure {
-  //display: flex;
   padding: 10px;
   margin: 10px;
 }
@@ -389,7 +389,6 @@ figure {
 }
 
 .splash-words{
-  // margin: 20%;
   font-family: 'Permanent Marker', cursive;
 
 }
@@ -400,7 +399,6 @@ figure {
 
 .glow {
   font-family: 'Meow Script', cursive;
-  // font-size: px;
   color: #fff;
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
