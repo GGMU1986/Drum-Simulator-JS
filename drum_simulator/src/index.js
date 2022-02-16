@@ -1,11 +1,11 @@
      
-
 document.addEventListener("DOMContentLoaded", () => {
     
     //
     // Creating audio tags and giving them the drum sound source 
     //
 
+    // .wav files
     const SOUNDS = [
       ["KeyA", "COWBELL"],
       ["KeyS", "HIHAT"],
@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ["Semicolon", "CRASH"],
     ]
     
+    // .mp3 files
     const SOUNDS2 = [
       ["KeyE", "kawhi"],
       ["KeyR", "cartoon-jump"],
@@ -52,10 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Adding class of playing when key is pressed for visual appearance
     //
 
-    window.addEventListener('keydown', function(e) {
+    window.addEventListener('keydown', (e) => {
         const audio = document.querySelector(`audio[data-key="${e.code}"]`)
         const key = document.querySelector(`.key[data-key="${e.code}"]`)
-        audio.currentTime = 0; // web audio API method that rewinds .wav to beginning on each keydown
+        audio.currentTime = 0; // web audio API method that rewinds audio file to beginning on each keydown
         audio.play();
         key.classList.add('playing')
     });
@@ -72,6 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const keys = document.querySelectorAll(".key")
 
     // adding an event listener to each key to remove class of playing after transition ends
+
+    // *********************
+    // JS Event bubbling may just be able to add event listener to keys for better performance
+    // ********************* 
+    
     keys.forEach(key => key.addEventListener('transitionend', removeClass));
     
     //
@@ -123,35 +129,35 @@ document.addEventListener("DOMContentLoaded", () => {
         const track = document.querySelector(`audio[data-song="${e.target.id}"]`);
 
         if (this.dataset.playing === 'false') {
-            track.play();
-            this.dataset.playing = 'true';
-            TRACKS.forEach(track => {
-                if (track[0] === e.target.id) this.innerText = track[1] + " - Pause";
-            })
+          track.play();
+          this.dataset.playing = 'true';
+          TRACKS.forEach(track => {
+              if (track[0] === e.target.id) this.innerText = track[1] + " - Pause";
+          })
 
         } else {
-            track.pause();
-            this.dataset.playing = 'false';
-            TRACKS.forEach(track => {
-                if (track[0] === e.target.id) this.innerText = track[1] + " - Play";
-            })
+          track.pause();
+          this.dataset.playing = 'false';
+          TRACKS.forEach(track => {
+              if (track[0] === e.target.id) this.innerText = track[1] + " - Play";
+          })
         }  
     }
 
     function stopSound(e) {
-        const track = document.querySelector(`audio[data-song="${e.target.id}"]`);
-        track.pause();
-        track.currentTime = 0;
-        const btn = document.getElementById(`${e.target.id}`)
-        btn.dataset.playing = false;
-        TRACKS.forEach(track => {
-            if (track[0] === e.target.id) btn.innerText = track[1] + " - Play";
-        })
+      const track = document.querySelector(`audio[data-song="${e.target.id}"]`);
+      track.pause();
+      track.currentTime = 0;
+      const btn = document.getElementById(`${e.target.id}`)
+      btn.dataset.playing = false;
+      TRACKS.forEach(track => {
+          if (track[0] === e.target.id) btn.innerText = track[1] + " - Play";
+      })
     }
     
     const btns = document.querySelectorAll(".btn");
     btns.forEach(btn => {
-        btn.addEventListener('click', playSound);
+      btn.addEventListener('click', playSound);
     });
 
     const stopbtns = document.querySelectorAll(".stop")
@@ -214,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const keyCont = document.querySelector('.keydown-container')
     
     jimClose.addEventListener('click', () => {
-        keyCont.classList.add('hide');
+      keyCont.classList.add('hide');
     })
     
 
@@ -269,21 +275,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // }
 
     const COLORS = [
-        'red', 'blue', 'green', 'white', 'yellow', 
-        'purple', 'orange', 'gray', 'pink', 'lightblue', 
-        'navy', 'maroon', 'teal', 'cyan', 'olive', 
-        'silver', 'brown', 'slategray' , 'honeydew', 'violet', 
-        'antique ruby', 'blue-green', 'byzantine', 'cark orchid' 
-    ]
+      'red', 'blue', 'green', 'white', 'yellow', 
+      'purple', 'orange', 'gray', 'pink', 'lightblue', 
+      'navy', 'maroon', 'teal', 'cyan', 'olive', 
+      'silver', 'brown', 'slategray' , 'honeydew', 'violet', 
+      'antique ruby', 'blue-green', 'byzantine', 'cark orchid' 
+    ];
 
     class Balloon {
         constructor() {
-            this.x = Math.round(Math.random() * 1450);
-            this.y = Math.round(Math.random() * 800);
-            this.size = Math.round(Math.random() * 50); // sets radius between 0 & 50
-            this.velX = Math.random() * 4 - 2; 
-            this.velY = Math.random() * 4 - 2;
-            this.color = COLORS[Math.floor(Math.random() * COLORS.length - 1)];
+          this.x = Math.round(Math.random() * 1450);
+          this.y = Math.round(Math.random() * 800);
+          this.size = Math.round(Math.random() * 50); // sets radius between 0 & 50
+          this.velX = Math.random() * 4 - 2; 
+          this.velY = Math.random() * 4 - 2;
+          this.color = COLORS[Math.floor(Math.random() * COLORS.length - 1)];
         }
 
         // updates random x, y position each time we call animate in loop
