@@ -1,5 +1,7 @@
 
-
+ 
+// Animation on canvas with keydown events
+    
 export const createBallons = () => {
 
     const canvas = document.getElementById('canvas');

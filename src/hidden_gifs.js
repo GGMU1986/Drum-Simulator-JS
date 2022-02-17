@@ -1,5 +1,7 @@
 
 
+// Easter Egg gifs
+
 export const hiddenGifs = () => {
   const IMAGES = [
         ['KeyG', 'whiplash'],
