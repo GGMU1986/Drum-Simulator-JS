@@ -4,6 +4,7 @@
 
 export const setUpSounds = () => {
 
+    // .wav files
     const SOUNDS = [
       ["KeyA", "COWBELL"],
       ["KeyS", "HIHAT"],
