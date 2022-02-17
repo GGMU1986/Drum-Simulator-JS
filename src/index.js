@@ -30,12 +30,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (audio){
           audio.currentTime = 0; // web audio API method that rewinds audio file to beginning on each keydown
           audio.play();
-          key.classList.add('playing')
+          if (key){
+            key.classList.add('playing')
+          }
         }
     });
 
     function removeClass(e) {
-        this.classList.remove('playing');
+      this.classList.remove('playing');
     }
 
     //
