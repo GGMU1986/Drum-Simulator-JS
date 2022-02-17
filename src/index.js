@@ -1,5 +1,6 @@
 import { setUpSounds } from './sounds';
 import { setUpTracks } from './tracks';
+import { adjustVolume } from './volume';
  
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -53,15 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
     //
     // Adjusting volume
     //
-
-    function changeVolume(e) {
-      const newVol = e.target.value;
-      const audios = document.querySelectorAll('audio');
-      audios.forEach(audio => audio.volume = newVol);
-    }
-
-    const volume = document.getElementById('volume');
-    volume.addEventListener('input', changeVolume)
+    
+    adjustVolume();
     
     //
     // Pop up of 'Coming Soon' for RECORD and MEMORY GAME
