@@ -1,6 +1,10 @@
 import { setUpSounds } from './sounds';
 import { setUpTracks } from './tracks';
 import { adjustVolume } from './volume';
+import { comingSoon } from './coming_soon';
+import { about } from './about';
+import { createBallons } from './balloons';
+import { hiddenGifs } from './hidden_gifs';
  
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -15,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Adding event listener so when appropriate key is pressed the drums sound is made
     // Adding class of playing when key is pressed for visual appearance
     //
+
+    // **********************
+    // BELOW MAY BE CAUSING ERROR IN CONSOLE
+    // **********************
 
     window.addEventListener('keydown', (e) => {
         const audio = document.querySelector(`audio[data-key="${e.code}"]`)
@@ -46,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     keys.forEach(key => key.addEventListener('transitionend', removeClass));
     
     //
-    // ** drumless tracks section **
+    // drumless tracks section
     //
     
     setUpTracks();
@@ -61,35 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Pop up of 'Coming Soon' for RECORD and MEMORY GAME
     //
 
-    const soon = document.querySelectorAll('.soon')
-    const popupContainer = document.getElementById('popup-container')
-    const close = document.getElementById('close')
-
-    soon.forEach(el => {
-        el.addEventListener('click', () => {
-            popupContainer.classList.add('show');
-        })
-    })
-
-    close.addEventListener('click', () => {
-        popupContainer.classList.remove('show');
-    })
+    comingSoon();
 
     //
     // About button pop up
     //
 
-    const about = document.getElementById('about-btn')
-    const aboutClose = document.getElementById('about-close')
-    const aboutPopup = document.getElementById('about-popup-container') 
-
-    about.addEventListener('click', () => {
-      aboutPopup.classList.add('show');
-    })
-
-    aboutClose.addEventListener('click', () => {
-        aboutPopup.classList.remove('show');
-    })
+    about();
 
     //
     // Jim keydown gif
@@ -116,129 +102,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Animation on canvas with keydown events
     //
 
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    // FIX BELOW TO SHOW TEXT
-
-    // const SOUNDS = [
-    //     ["KeyA", "COWBELL"],
-    //     ["KeyS", "HIHAT"],
-    //     ["KeyD", "KICK"],
-    //     ["KeyF", "OPENHIHAT"],
-    //     ["KeyJ", "SNARE"],
-    //     ["KeyK", "TOM"],
-    //     ["KeyL", "RIDE"],
-    //     ["Semicolon", "CRASH"],
-    // ]
-    
-    // function addText(e) {
-    //     SOUNDS.forEach(pair => {
-    //         if (e.code === pair[0]) {
-                
-                
-    //         }
-    //     })
-    // }
-    // console.log(SOUNDS[3][1]);
-    
-
-    // window.addEventListener('keydown', function(e) {
-    //     if (e.code === "KeyF") {
-    //         ctx.fillStyle = "white";
-    //         ctx.font = "bold 60px Arial";
-    //         ctx.fillText("SOUNDS[3][1]", 500, 500);
-    //     }
-    // }
-
-    const COLORS = [
-      'red', 'blue', 'green', 'white', 'yellow', 
-      'purple', 'orange', 'gray', 'pink', 'lightblue', 
-      'navy', 'maroon', 'teal', 'cyan', 'olive', 
-      'silver', 'brown', 'slategray' , 'honeydew', 'violet', 
-      'antique ruby', 'blue-green', 'byzantine', 'cark orchid' 
-    ];
-
-    class Balloon {
-        constructor() {
-          this.x = Math.round(Math.random() * 1450);
-          this.y = Math.round(Math.random() * 800);
-          this.size = Math.round(Math.random() * 50); // sets radius between 0 & 50
-          this.velX = Math.random() * 4 - 2; 
-          this.velY = Math.random() * 4 - 2;
-          this.color = COLORS[Math.floor(Math.random() * COLORS.length - 1)];
-        }
-
-        // updates random x, y position each time we call animate in loop
-        update() {
-            this.x += this.velX;
-            this.y += this.velY;
-            if (this.size > 0.2) this.size -= 0.1
-        }
-
-        // draws a new balloon
-        draw() {
-            ctx.fillStyle = this.color;
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.closePath();
-        }
-    }
-
-    function animate(balloon1, balloon2, balloon3) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        balloon1.update();
-        balloon1.draw();
-        balloon2.update();
-        balloon2.draw();
-        balloon3.update();
-        balloon3.draw();
-        requestAnimationFrame(() => { animate(balloon1, balloon2, balloon3) });
-    }
-
-    document.addEventListener('keydown', function(e) {
-        let balloons = [];
-        for (let i = 0; i < 3; i++) {
-            balloons.push(new Balloon());
-        }
-        animate(...balloons) 
-    })
+    createBallons();
     
     //
     // Easter Egg gifs
     //
 
-    const IMAGES = [
-        ['KeyG', 'whiplash'],
-        ['KeyH', 'will'],
-        ['Space', 'monkey']
-    ]     
-
-    window.addEventListener('keydown', function(e) {
-        IMAGES.forEach((img) => {
-            if (e.code === img[0]) {
-                document.getElementById(`${img[1]}`).classList.add('show');
-            }
-        })
-    })
-
-    const will = document.getElementById('cwill')
-    const whiplash = document.getElementById('cwhiplash')
-    const monkey = document.getElementById('cmonkey')
-
-    will.addEventListener('click', function(e) {
-        document.getElementById('will').classList.remove('show');
-    })
-
-    whiplash.addEventListener('click', function (e) {
-        document.getElementById('whiplash').classList.remove('show');
-    })
-
-    monkey.addEventListener('click', function(e) {
-        document.getElementById('monkey').classList.remove('show');
-    })
+    hiddenGifs();
+    
 });
