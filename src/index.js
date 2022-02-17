@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let audio = document.createElement("audio");
         const audioDiv = document.getElementById("audio-tags");
         audioDiv.append(audio);
-        let src = "./drum_simulator/sounds/" + pair[1] + ".wav";
+        let src = "./sounds/" + pair[1] + ".wav";
         audio.src = src;
         audio.dataset.key = `${pair[0]}`;
     })
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let audio = document.createElement("audio");
         const audioDiv = document.getElementById("audio-tags");
         audioDiv.append(audio);
-        let src = "./drum_simulator/sounds/" + pair[1] + ".mp3";
+        let src = "./sounds/" + pair[1] + ".mp3";
         audio.src = src;
         audio.dataset.key = `${pair[0]}`;
     })
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const audioDiv = document.getElementById("audio-tags");
         let audio = document.createElement("audio")
         audio.setAttribute("loop", "true")
-        let src = "./drum_simulator/sounds/" + track[0] + ".wav";
+        let src = "./sounds/" + track[0] + ".wav";
         audio.src = src;
         audio.dataset.song = track[0];
         audio.classList.add("track")
