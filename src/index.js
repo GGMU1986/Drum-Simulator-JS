@@ -6,7 +6,8 @@ import { about } from './about';
 import { createBallons } from './balloons';
 import { hiddenGifs } from './hidden_gifs';
 import { keySoundStyle } from './key_sound_style';
- 
+import { startJamming, jimGif } from './jam_jim'; 
+
 document.addEventListener("DOMContentLoaded", () => {
     
   setUpSounds();
@@ -17,24 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   about();
   createBallons();
   hiddenGifs();
-
-  //
-  // Jim keydown gif
-  //
-
-  const jimClose = document.getElementById('jim-close')
-  const keyCont = document.querySelector('.keydown-container')
-  
-  jimClose.addEventListener('click', () => {
-    keyCont.classList.add('hide');
-  })
-  
-  //
-  // landing page stuff
-  //
-
-  const jam = document.getElementById('jam')
-  jam.addEventListener('click', function(e) {
-      document.getElementById('about-container').classList.add('bye');
-  })  
+  startJamming();
+  jimGif();
+ 
 });
